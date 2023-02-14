@@ -6,93 +6,59 @@
     android:columnCount="3"
     tools:context=".GridLayoutActivity">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/poland_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/poland_flag"
         android:scaleType="centerCrop"
         android:src="@drawable/poland" />
 
-
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/italy_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/italy_flag"
         android:scaleType="fitXY"
         android:src="@drawable/italy" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/thailand_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/thailand_flag"
         android:scaleType="centerCrop"
         android:src="@drawable/thailand" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/madagascar_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/madagascar_flag"
         android:scaleType="fitXY"
         android:src="@drawable/madagascar" />
 
-
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/colombia_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/colombia_flag"
         android:scaleType="centerCrop"
         android:src="@drawable/colombia" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/austria_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/austria_flag"
         android:scaleType="centerCrop"
         android:src="@drawable/austria" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/denmark_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
+        style="@style/ImageViewInGridLayoutStyle"
         android:contentDescription="@string/denmark_flag"
         android:scaleType="fitXY"
         android:src="@drawable/denmark" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/switzerland_flag_frame"
-        android:layout_width="@dimen/imageView_size_grid"
-        android:layout_height="@dimen/imageView_size_grid"
-        android:layout_margin="@dimen/imageView_margins_grid"
+        style="@style/ImageViewInGridLayoutStyle"
         android:layout_column="2"
-        android:background="@drawable/rounded_background"
-        android:clipToOutline="true"
         android:contentDescription="@string/switzerland_flag"
         android:scaleType="centerCrop"
         android:src="@drawable/switzerland" />

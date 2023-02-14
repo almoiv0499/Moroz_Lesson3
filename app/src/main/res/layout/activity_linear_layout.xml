@@ -1,131 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="3"
     tools:context=".LinearLayoutActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/NestedLinearLayoutStyle">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/poland_flag_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
-            android:contentDescription="@string/poland_flag"
+            style="@style/ImageViewInLinearLayoutStyle"
+            android:contentDescription="@string/madagascar_flag"
             android:scaleType="centerCrop"
             android:src="@drawable/poland" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/italy_flag_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/italy_flag"
             android:scaleType="fitXY"
             android:src="@drawable/italy" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/thailand_flag_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/thailand_flag"
             android:scaleType="centerCrop"
             android:src="@drawable/thailand" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/NestedLinearLayoutStyle">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/madagascar_flag_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/madagascar_flag"
             android:scaleType="fitXY"
             android:src="@drawable/madagascar" />
 
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/colombia_flag_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/colombia_flag"
             android:scaleType="centerCrop"
             android:src="@drawable/colombia" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/austria_flag_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/austria_flag"
             android:scaleType="centerCrop"
             android:src="@drawable/austria" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/NestedLinearLayoutStyle">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/denmark_flag_frame_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/denmark_flag"
             android:scaleType="fitXY"
             android:src="@drawable/denmark" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/switzerland_flag_frame_linear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/imageView_size_linear"
-            android:layout_margin="@dimen/imageView_margins_linear"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_background"
-            android:clipToOutline="true"
+            style="@style/ImageViewInLinearLayoutStyle"
             android:contentDescription="@string/switzerland_flag"
             android:scaleType="centerCrop"
             android:src="@drawable/switzerland" />

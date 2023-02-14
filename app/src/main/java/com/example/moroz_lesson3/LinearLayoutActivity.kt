@@ -14,6 +14,8 @@ class LinearLayoutActivity : AppCompatActivity() {
         binding = ActivityLinearLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "LinearLayout"
+
         navigateToGridLayoutActivity()
         navigateToFrameLayoutActivity()
     }

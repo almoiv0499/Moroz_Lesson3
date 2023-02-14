@@ -13,6 +13,8 @@ class GridLayoutActivity : AppCompatActivity() {
         binding = ActivityGridLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "GridLayout"
+
         navigateToFrameLayoutActivity()
         navigateToLinearLayoutActivity()
     }
