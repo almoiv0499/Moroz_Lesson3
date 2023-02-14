@@ -6,4 +6,8 @@
     <!-- FrameLayout -->
     <dimen name="imageView_size_frame">100dp</dimen>
     <dimen name="imageView_margins_frame">10dp</dimen>
+
+    <!-- LinearLayout -->
+    <dimen name="imageView_size_linear">100dp</dimen>
+    <dimen name="imageView_margins_linear">10dp</dimen>
 </resources>
