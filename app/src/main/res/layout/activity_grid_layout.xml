@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="3"
     tools:context=".GridLayoutActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/poland_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/poland_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poland" />
+
+
+    <ImageView
+        android:id="@+id/italy_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/italy_flag"
+        android:scaleType="fitXY"
+        android:src="@drawable/italy" />
+
+    <ImageView
+        android:id="@+id/thailand_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/thailand_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/thailand" />
+
+    <ImageView
+        android:id="@+id/madagascar_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/madagascar_flag"
+        android:scaleType="fitXY"
+        android:src="@drawable/madagascar" />
+
+
+    <ImageView
+        android:id="@+id/colombia_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/colombia_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/colombia" />
+
+    <ImageView
+        android:id="@+id/austria_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/austria_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/austria" />
+
+    <ImageView
+        android:id="@+id/denmark_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/denmark_flag"
+        android:scaleType="fitXY"
+        android:src="@drawable/denmark" />
+
+    <ImageView
+        android:id="@+id/switzerland_flag_frame"
+        android:layout_width="@dimen/imageView_size_grid"
+        android:layout_height="@dimen/imageView_size_grid"
+        android:layout_margin="@dimen/imageView_margins_grid"
+        android:layout_column="2"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
+        android:contentDescription="@string/switzerland_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/switzerland" />
+
+</GridLayout>

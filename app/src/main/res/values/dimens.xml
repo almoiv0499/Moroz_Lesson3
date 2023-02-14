@@ -10,4 +10,8 @@
     <!-- LinearLayout -->
     <dimen name="imageView_size_linear">100dp</dimen>
     <dimen name="imageView_margins_linear">10dp</dimen>
+
+    <!-- GridLayout -->
+    <dimen name="imageView_size_grid">100dp</dimen>
+    <dimen name="imageView_margins_grid">10dp</dimen>
 </resources>
