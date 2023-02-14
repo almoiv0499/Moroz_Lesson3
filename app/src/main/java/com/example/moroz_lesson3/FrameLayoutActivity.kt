@@ -14,19 +14,19 @@ class FrameLayoutActivity : AppCompatActivity() {
         binding = ActivityFrameLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navigateToLinearActivity()
-        navigateToGridActivity()
+        navigateToLinearLayoutActivity()
+        navigateToGridLayoutActivity()
     }
 
-    private fun navigateToLinearActivity() {
-        binding.denmarkFlag.setOnClickListener {
+    private fun navigateToLinearLayoutActivity() {
+        binding.denmarkFlagFrame.setOnClickListener {
             val intent = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intent)
         }
     }
 
-    private fun navigateToGridActivity() {
-        binding.switzerlandFlag.setOnClickListener {
+    private fun navigateToGridLayoutActivity() {
+        binding.switzerlandFlagFrame.setOnClickListener {
             val intent = Intent(this, GridLayoutActivity::class.java)
             startActivity(intent)
         }
