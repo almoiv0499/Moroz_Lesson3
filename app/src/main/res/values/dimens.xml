@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background Corners -->
+    <dimen name="corner_radius">10dp</dimen>
+
+    <!-- FrameLayout -->
+    <dimen name="imageView_size_frame">100dp</dimen>
+    <dimen name="imageView_margins_frame">10dp</dimen>
+</resources>

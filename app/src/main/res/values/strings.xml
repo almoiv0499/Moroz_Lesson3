@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Moroz_Lesson3</string>
+    <string name="poland_flag">Poland Flag</string>
+    <string name="italy_flag">Italy Flag</string>
+    <string name="thailand_flag">Thailand Flag</string>
+    <string name="madagascar_flag">Madagascar Flag</string>
+    <string name="colombia_flag">Colombia Flag</string>
+    <string name="austria_flag">Austria Flag</string>
+    <string name="denmark_flag">Denmark Flag</string>
+    <string name="switzerland_flag">Switzerland Flag</string>
 </resources>
