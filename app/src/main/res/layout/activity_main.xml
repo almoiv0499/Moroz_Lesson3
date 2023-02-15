@@ -30,9 +30,8 @@
     <ImageView
         android:id="@+id/logo_imageView"
         android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="@id/description"
         app:layout_constraintEnd_toStartOf="@id/title"
@@ -43,13 +42,10 @@
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="10dp"
         android:text="ИТ-решения для развития бизнеса"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/description"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,13 +56,10 @@
         android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
         android:text="Разработка программного обеспечения"
         android:textColor="@color/black"
-        android:textSize="17sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/about_us"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/logo_imageView"
@@ -76,25 +69,30 @@
         android:id="@+id/about_us"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
         android:text="О нас:"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/company_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_imageView" />
+        app:layout_constraintTop_toBottomOf="@id/description" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/company_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="Aston - компания по разработке ПО с полным циклом услуг. Уже 15 лет мы помогаем заказчикам по всему мру трансформировать бизнес, создавая эффективные мобильные и десктопные решения."
         android:textColor="@color/black"
-        android:textSize="21sp"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@id/offices"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/about_us" />
 
@@ -102,11 +100,13 @@
         android:id="@+id/offices"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Офисы"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
+        android:text="Офисы"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,98 +116,115 @@
         android:id="@+id/chip_moscow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:padding="10dp"
         android:background="@drawable/chips_background"
-        android:text="Москва" />
+        android:padding="8dp"
+        android:text="Москва"
+        android:textColor="@color/black" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/chip_kazan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:padding="10dp"
         android:background="@drawable/chips_background"
-        android:text="Казань" />
+        android:padding="8dp"
+        android:text="Казань"
+        android:textColor="@color/black" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/chip_rostov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:padding="10dp"
         android:background="@drawable/chips_background"
-        android:text="Ростов-на-Дону" />
+        android:padding="8dp"
+        android:text="Ростов-на-Дону"
+        android:textColor="@color/black" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/chip_minsk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:padding="10dp"
         android:background="@drawable/chips_background"
-        android:text="Минск" />
+        android:padding="8dp"
+        android:text="Минск"
+        android:textColor="@color/black" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/chip_gomel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:padding="10dp"
         android:background="@drawable/chips_background"
-        android:text="Гомель" />
+        android:padding="8dp"
+        android:text="Гомель"
+        android:textColor="@color/black" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow"
         android:layout_width="0dp"
-        app:flow_wrapMode="chain"
-        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:constraint_referenced_ids="chip_moscow,chip_kazan,chip_rostov,chip_minsk,chip_gomel"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="6dp"
         app:flow_horizontalStyle="packed"
         app:flow_verticalGap="4dp"
-        app:flow_horizontalGap="6dp"
-        app:flow_horizontalBias="0"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="chip_moscow,chip_kazan,chip_rostov,chip_minsk,chip_gomel"
+        app:flow_wrapMode="chain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/offices" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/contacts"
-        android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:textSize="13sp"
+        android:text="Контакты"
         app:layout_constraintEnd_toStartOf="@id/vacancies"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/flow"
-        />
+        app:layout_constraintTop_toBottomOf="@id/flow" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/vacancies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:text="Вакансии"
         app:layout_constraintEnd_toStartOf="@id/gallery"
         app:layout_constraintStart_toEndOf="@id/contacts"
-        app:layout_constraintTop_toBottomOf="@id/flow"
-        />
+        app:layout_constraintTop_toBottomOf="@id/flow" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/gallery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:layout_constraintStart_toEndOf="@id/vacancies"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="13sp"
+        android:text="Гелерея"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/flow"
-        />
-    
+        app:layout_constraintStart_toEndOf="@id/vacancies"
+        app:layout_constraintTop_toBottomOf="@id/flow" />
+
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="offices,flow,contacts,vacancies,gallery"
-        />
+        app:constraint_referenced_ids="offices,flow,contacts,vacancies,gallery" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:padding="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/company_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
