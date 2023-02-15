@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.moroz_lesson3.databinding.ActivityFrameLayoutBinding
 
 class FrameLayoutActivity : AppCompatActivity() {
+    companion object {
+        private const val LAYOUT_NAME = "FrameLayout"
+    }
 
     private lateinit var binding: ActivityFrameLayoutBinding
 
@@ -14,7 +17,7 @@ class FrameLayoutActivity : AppCompatActivity() {
         binding = ActivityFrameLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "FrameLayout"
+        supportActionBar?.title = LAYOUT_NAME
 
         navigateToLinearLayoutActivity()
         navigateToGridLayoutActivity()
@@ -33,5 +36,4 @@ class FrameLayoutActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }
