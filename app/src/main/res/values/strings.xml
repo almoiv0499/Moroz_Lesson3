@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Aston Intensive</string>
-    <string name="welcome_image">Welcome Image</string>
-    <string name="aston_logo">Aston Logo</string>
+    <string name="welcome_image" translatable="false">Welcome Image</string>
+    <string name="aston_logo" translatable="false">Aston Logo</string>
     <string name="about_us">About us:</string>
     <string name="string_office_locations">Offices</string>
     <string name="string_moscow_location">Moscow</string>
