@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_land_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guideline_begin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_land_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guideline_end" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_land_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_land_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_land_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/welcome_land_imageView"
+        android:layout_width="@dimen/imageView_width_by_fill"
+        android:layout_height="@dimen/imageView_height"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/welcome_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/title_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_land_image"/>
+
+    <ImageView
+        android:id="@+id/logo_imageView"
+        android:layout_marginStart="@dimen/flow_land_marginStart"
+        android:layout_width="@dimen/imageView_width"
+        android:layout_height="@dimen/imageView_height"
+        android:contentDescription="@string/aston_logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/subtitle"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        style="@style/TextViewLandTitlesStyle"
+        android:text="@string/string_title"
+        app:layout_constraintStart_toEndOf="@id/logo_imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_end"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subtitle"
+        style="@style/TextViewDescriptionStyle"
+        android:text="@string/string_subtitle"
+        android:textSize="@dimen/textView_description_textSize"
+        app:layout_constraintStart_toEndOf="@id/logo_imageView"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_end"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/office_locations"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/about_us_title"
+        style="@style/TextViewLandTitlesStyle"
+        android:text="@string/about_us"
+        app:layout_constraintTop_toBottomOf="@id/guideline_land_image"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_divider"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/about_us_description"
+        style="@style/TextViewDescriptionStyle"
+        android:text="@string/string_about_us_description"
+        android:textSize="@dimen/textView_about_us_description_land_textSize"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_land_bottom"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toBottomOf="@id/about_us_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/office_locations"
+        style="@style/TextViewLandTitlesStyle"
+        android:layout_marginStart="@dimen/flow_land_marginStart"
+        android:gravity="center"
+        android:text="@string/string_office_locations"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toBottomOf="@id/spacer"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="@dimen/barrier_width"
+        android:layout_height="@dimen/barrier_height"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="subtitle,logo_imageView" />
+
+    <Space
+        android:id="@+id/spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/moscow_location"
+        style="@style/TextViewChipsStyle"
+        android:text="@string/string_moscow_location" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/kazan_location"
+        style="@style/TextViewChipsStyle"
+        android:text="@string/string_kazan_location" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/rostov_location"
+        style="@style/TextViewChipsStyle"
+        android:text="@string/string_rostov_on_don_location" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/minsk_location"
+        style="@style/TextViewChipsStyle"
+        android:text="@string/string_minsk_location" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gomel_location"
+        style="@style/TextViewChipsStyle"
+        android:text="@string/string_gomel_location" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_locations"
+        android:layout_width="@dimen/flow_width"
+        android:layout_marginStart="@dimen/flow_land_marginStart"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="moscow_location,kazan_location,rostov_location,minsk_location,gomel_location"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="@dimen/flow_horizontalGap"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalGap="@dimen/flow_verticalGap"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toBottomOf="@id/office_locations" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_contacts"
+        style="@style/CategoryButtonsStyle"
+        android:text="@string/string_contacts"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_land_bottom"
+        app:layout_constraintEnd_toStartOf="@id/button_vacancies"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toBottomOf="@id/flow_locations"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_vacancies"
+        style="@style/CategoryButtonsStyle"
+        android:layout_marginStart="@dimen/button_marginStart"
+        android:layout_marginEnd="@dimen/button_marginEnd"
+        android:text="@string/string_vacancies"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_land_bottom"
+        app:layout_constraintEnd_toStartOf="@id/button_gallery"
+        app:layout_constraintStart_toEndOf="@id/button_contacts"
+        app:layout_constraintTop_toBottomOf="@id/flow_locations"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_gallery"
+        style="@style/CategoryButtonsStyle"
+        android:text="@string/string_gallery"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_land_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_end"
+        app:layout_constraintStart_toEndOf="@id/button_vacancies"
+        app:layout_constraintTop_toBottomOf="@id/flow_locations"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_visibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="office_locations,flow_locations,button_contacts,button_vacancies,button_gallery" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="@dimen/progressBar_width"
+        android:layout_height="@dimen/progressBar_height"
+        android:layout_margin="@dimen/progressBar_margin"
+        android:padding="@dimen/progressBar_padding"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_land_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guideline_land_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_land_divider"
+        app:layout_constraintTop_toTopOf="@id/guideline_land_image"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

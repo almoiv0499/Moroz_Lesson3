@@ -20,6 +20,8 @@
     <!-- TextView -->
     <dimen name="textView_marginTop">5dp</dimen>
     <dimen name="textView_titles_textSize">22sp</dimen>
+    <dimen name="textView_titles_land_textSize">22sp</dimen>
+    <dimen name="textView_about_us_description_land_textSize">15sp</dimen>
     <dimen name="textView_width">0dp</dimen>
     <dimen name="textView_description_textSize">16sp</dimen>
     <dimen name="textView_about_company_textSize">19sp</dimen>
@@ -34,6 +36,7 @@
     <dimen name="flow_width">0dp</dimen>
     <dimen name="flow_verticalGap">8dp</dimen>
     <dimen name="flow_horizontalGap">8dp</dimen>
+    <dimen name="flow_land_marginStart">10dp</dimen>
 
     <!-- ProgressBar -->
     <dimen name="progressBar_width">0dp</dimen>
