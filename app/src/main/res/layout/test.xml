@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/guideline_begin" />
+        app:layout_constraintGuide_begin="10dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/guideline_end" />
+        app:layout_constraintGuide_end="10dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
@@ -63,27 +61,27 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title"
         style="@style/TextViewTitlesStyle"
-        android:text="@string/string_title"
+        android:text="ИТ-решения для развития бизнеса"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toEndOf="@id/logo_imageView"
-        app:layout_constraintTop_toTopOf="@id/logo_imageView"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintTop_toTopOf="@id/logo_imageView" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/subtitle"
         style="@style/TextViewDescriptionStyle"
-        android:text="@string/string_subtitle"
+        android:text="Разработка программного обеспечения"
         android:textSize="@dimen/textView_description_textSize"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintBottom_toTopOf="@id/about_us_title"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toEndOf="@id/logo_imageView"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
-        android:layout_width="@dimen/barrier_width"
-        android:layout_height="@dimen/barrier_height"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="subtitle,logo_imageView" />
 
@@ -97,7 +95,8 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/about_us_title"
         style="@style/TextViewTitlesStyle"
-        android:text="@string/about_us"
+        android:text="О нас:"
+        app:layout_constraintBottom_toTopOf="@id/about_us_description"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/spacer" />
@@ -105,7 +104,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/about_us_description"
         style="@style/TextViewDescriptionStyle"
-        android:text="@string/string_about_us_description"
+        android:text="Aston - компания по разработке ПО с полным циклом услуг. Уже 15 лет мы помогаем заказчикам по всему мру трансформировать бизнес, создавая эффективные мобильные и десктопные решения."
         android:textSize="@dimen/textView_about_company_textSize"
         app:layout_constraintBottom_toTopOf="@id/office_locations"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
@@ -116,7 +115,7 @@
         android:id="@+id/office_locations"
         style="@style/TextViewTitlesStyle"
         android:gravity="center"
-        android:text="@string/string_office_locations"
+        android:text="Офисы"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/about_us_description" />
@@ -124,27 +123,27 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/moscow_location"
         style="@style/TextViewChipsStyle"
-        android:text="@string/string_moscow_location" />
+        android:text="Москва" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/kazan_location"
         style="@style/TextViewChipsStyle"
-        android:text="@string/string_kazan_location" />
+        android:text="Казань" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/rostov_location"
         style="@style/TextViewChipsStyle"
-        android:text="@string/string_rostov_on_don_location" />
+        android:text="Ростов-на-Дону" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/minsk_location"
         style="@style/TextViewChipsStyle"
-        android:text="@string/string_minsk_location" />
+        android:text="Минск" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/gomel_location"
         style="@style/TextViewChipsStyle"
-        android:text="@string/string_gomel_location" />
+        android:text="Гомель" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow_locations"
@@ -163,10 +162,11 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_contacts"
         style="@style/CategoryButtonsStyle"
-        android:text="@string/string_contacts"
+        android:layout_marginStart="@dimen/button_marginStart"
+        android:text="Контакты"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toStartOf="@id/button_vacancies"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/flow_locations"
         app:layout_constraintVertical_bias="0" />
@@ -174,9 +174,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_vacancies"
         style="@style/CategoryButtonsStyle"
-        android:layout_marginStart="@dimen/button_marginStart"
-        android:layout_marginEnd="@dimen/button_marginEnd"
-        android:text="@string/string_vacancies"
+        android:text="Вакансии"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toStartOf="@id/button_gallery"
         app:layout_constraintStart_toEndOf="@id/button_contacts"
@@ -186,7 +184,8 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_gallery"
         style="@style/CategoryButtonsStyle"
-        android:text="@string/string_gallery"
+        android:layout_marginEnd="@dimen/button_marginEnd"
+        android:text="Гелерея"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toEndOf="@id/button_vacancies"

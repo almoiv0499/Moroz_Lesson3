@@ -1,9 +1,8 @@
 package com.example.moroz_lesson3
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.lifecycle.VIEW_MODEL_STORE_OWNER_KEY
+import androidx.appcompat.app.AppCompatActivity
 import com.example.moroz_lesson3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun actionAfterClickInContacts() {
         with(binding) {
-            contacts.setOnClickListener {
-                group.visibility = View.GONE
+            buttonContacts.setOnClickListener {
+                groupVisibility.visibility = View.GONE
                 progress.visibility = View.VISIBLE
             }
         }
@@ -31,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun actionAfterClickInVacancies() {
         with(binding) {
-            vacancies.setOnClickListener {
-                group.visibility = View.GONE
+            buttonVacancies.setOnClickListener {
+                groupVisibility.visibility = View.GONE
                 progress.visibility = View.VISIBLE
             }
         }
@@ -40,8 +39,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun actionAfterClickInGallery() {
         with(binding) {
-            gallery.setOnClickListener {
-                group.visibility = View.GONE
+            buttonGallery.setOnClickListener {
+                groupVisibility.visibility = View.GONE
                 progress.visibility = View.VISIBLE
             }
         }
