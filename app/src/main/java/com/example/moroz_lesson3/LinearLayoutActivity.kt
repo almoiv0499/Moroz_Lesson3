@@ -6,11 +6,13 @@ import android.os.Bundle
 import com.example.moroz_lesson3.databinding.ActivityLinearLayoutBinding
 
 class LinearLayoutActivity : AppCompatActivity() {
+
     companion object {
         private const val LAYOUT_NAME = "LinearLayout"
     }
 
     private lateinit var binding: ActivityLinearLayoutBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLinearLayoutBinding.inflate(layoutInflater)

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.moroz_lesson3.databinding.ActivityFrameLayoutBinding
 
 class FrameLayoutActivity : AppCompatActivity() {
+
     companion object {
         private const val LAYOUT_NAME = "FrameLayout"
     }
