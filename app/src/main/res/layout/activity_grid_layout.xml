@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="3"
+    android:layout_gravity="center"
+    tools:context=".GridLayoutActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/poland_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/poland_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poland" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/italy_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/italy_flag"
+        android:scaleType="fitXY"
+        android:src="@drawable/italy" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/thailand_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/thailand_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/thailand" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/madagascar_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/madagascar_flag"
+        android:scaleType="fitXY"
+        android:src="@drawable/madagascar" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/colombia_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/colombia_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/colombia" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/austria_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/austria_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/austria" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/denmark_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:contentDescription="@string/denmark_flag"
+        android:scaleType="fitXY"
+        android:src="@drawable/denmark" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/switzerland_flag_frame"
+        style="@style/ImageViewInGridLayoutStyle"
+        android:layout_column="2"
+        android:contentDescription="@string/switzerland_flag"
+        android:scaleType="centerCrop"
+        android:src="@drawable/switzerland" />
+
+</GridLayout>

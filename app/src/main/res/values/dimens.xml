@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background Corners -->
+    <dimen name="corner_radius">10dp</dimen>
+
+    <!-- FrameLayout -->
+    <dimen name="imageView_size_frame">100dp</dimen>
+    <dimen name="imageView_margins_frame">10dp</dimen>
+
+    <!-- LinearLayout -->
+    <dimen name="imageView_size_linear">100dp</dimen>
+    <dimen name="imageView_margins_linear">10dp</dimen>
+
+    <!-- GridLayout -->
+    <dimen name="imageView_size_grid">100dp</dimen>
+    <dimen name="imageView_margins_grid">10dp</dimen>
+</resources>

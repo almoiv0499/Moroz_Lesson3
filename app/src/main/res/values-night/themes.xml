@@ -2,15 +2,49 @@
     <!-- Base application theme. -->
     <style name="Theme.Moroz_Lesson3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
+    <style name="ImageViewInGridLayoutStyle">
+        <item name="android:layout_width">@dimen/imageView_size_grid</item>
+        <item name="android:layout_height">@dimen/imageView_size_grid</item>
+        <item name="android:layout_margin">@dimen/imageView_margins_grid</item>
+        <item name="shapeAppearanceOverlay">@style/CornersImageViewStyle</item>
+    </style>
+
+    <style name="NestedLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ImageViewInLinearLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/imageView_size_linear</item>
+        <item name="android:layout_margin">@dimen/imageView_margins_linear</item>
+        <item name="shapeAppearanceOverlay">@style/CornersImageViewStyle</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="ImageViewInFrameLayoutStyle">
+        <item name="android:layout_width">@dimen/imageView_size_frame</item>
+        <item name="android:layout_height">@dimen/imageView_size_frame</item>
+        <item name="android:layout_margin">@dimen/imageView_margins_frame</item>
+        <item name="shapeAppearanceOverlay">@style/CornersImageViewStyle</item>
+    </style>
+
+    <style name="CornersImageViewStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+        <item name="color">@color/black</item>
     </style>
 </resources>
