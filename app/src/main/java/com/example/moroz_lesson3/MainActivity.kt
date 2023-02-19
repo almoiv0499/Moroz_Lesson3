@@ -14,31 +14,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        actionAfterClickInContacts()
-        actionAfterClickInVacancies()
-        actionAfterClickInGallery()
+        actionAfterClick()
     }
 
-    private fun actionAfterClickInContacts() {
+    private fun actionAfterClick() {
         with(binding) {
             buttonContacts.setOnClickListener {
                 groupVisibility.visibility = View.GONE
                 progress.visibility = View.VISIBLE
             }
-        }
-    }
 
-    private fun actionAfterClickInVacancies() {
-        with(binding) {
             buttonVacancies.setOnClickListener {
                 groupVisibility.visibility = View.GONE
                 progress.visibility = View.VISIBLE
             }
-        }
-    }
 
-    private fun actionAfterClickInGallery() {
-        with(binding) {
             buttonGallery.setOnClickListener {
                 groupVisibility.visibility = View.GONE
                 progress.visibility = View.VISIBLE
