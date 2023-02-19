@@ -10,12 +10,11 @@
         android:id="@+id/layout_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/customView_margin"
         android:clickable="true"
         android:focusable="true"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
+        android:padding="@dimen/customView_padding"
+        app:cardCornerRadius="@dimen/customView_cornerRadius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,12 +22,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:padding="@dimen/customView_padding">
 
             <ImageView
                 android:id="@+id/logo_customView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/customView_widthImage"
+                android:layout_height="@dimen/customView_heightImage"
                 android:contentDescription="@string/logo_custom_view"
                 app:layout_constraintBottom_toBottomOf="@+id/subtitle_customView"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +35,12 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/title_customView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/customView_width"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="@dimen/customView_marginStart"
                 android:text="@string/title_customView"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="@dimen/customView_titleTextSize"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/logo_customView"
@@ -49,12 +48,12 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/subtitle_customView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/customView_width"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="@dimen/customView_marginStart"
                 android:text="@string/subtitle_customView"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="@dimen/customView_subtitleTextSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/logo_customView"
                 app:layout_constraintTop_toBottomOf="@id/title_customView" />

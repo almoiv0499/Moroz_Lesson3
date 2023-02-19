@@ -213,12 +213,11 @@
 
     <com.example.moroz_lesson3.AstonButtonView
         android:id="@+id/aston_button"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/customView_width"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         app:customImage="@drawable/logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintTop_toBottomOf="@id/button_contacts"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         />
