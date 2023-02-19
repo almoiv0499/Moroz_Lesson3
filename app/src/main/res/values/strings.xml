@@ -15,4 +15,7 @@
     <string name="string_title">IT solutions for business development</string>
     <string name="string_subtitle">Software Development</string>
     <string name="string_about_us_description">Aston is a full service software development company. For 15 years, we\'ve been helping customers around the world transform their businesses by building powerful mobile and desktop solutions.</string>
+    <string name="logo_custom_view">Logo custom view</string>
+    <string name="title_customView">Android trainee</string>
+    <string name="subtitle_customView">Стажировка по направлению Android</string>
 </resources>
