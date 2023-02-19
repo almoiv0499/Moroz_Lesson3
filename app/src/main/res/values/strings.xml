@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">Moroz_Lesson3</string>
+    <string name="app_name">Aston Intensive</string>
+    <string name="welcome_image" translatable="false">Welcome Image</string>
+    <string name="aston_logo" translatable="false">Aston Logo</string>
+    <string name="about_us">About us:</string>
+    <string name="string_office_locations">Offices</string>
+    <string name="string_moscow_location">Moscow</string>
+    <string name="string_kazan_location">Kazan</string>
+    <string name="string_rostov_on_don_location">Rostov-on-Don</string>
+    <string name="string_minsk_location">Minsk</string>
+    <string name="string_gomel_location">Gomel</string>
+    <string name="string_contacts">Contacts</string>
+    <string name="string_vacancies">Vacancies</string>
+    <string name="string_gallery">Gallery</string>
+    <string name="string_title">IT solutions for business development</string>
+    <string name="string_subtitle">Software Development</string>
+    <string name="string_about_us_description">Aston is a full service software development company. For 15 years, we\'ve been helping customers around the world transform their businesses by building powerful mobile and desktop solutions.</string>
 </resources>
