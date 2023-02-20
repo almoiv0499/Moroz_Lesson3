@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.VacanciesFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vacancies_guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vacancies_guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vacancies_guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <com.example.moroz_lesson3.AstonButtonView
+        android:id="@+id/first_vacancies"
+        android:layout_width="@dimen/customView_width"
+        app:titleText="@string/string_first_vacancies_title"
+        app:subtitleText="@string/string_first_vacancies_subtitle"
+        android:layout_height="wrap_content"
+        app:customImage="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
+        app:layout_constraintTop_toTopOf="@id/vacancies_guideline_top" />
+
+    <com.example.moroz_lesson3.AstonButtonView
+        android:id="@+id/second_vacancies"
+        android:layout_width="@dimen/customView_width"
+        android:layout_height="wrap_content"
+        app:titleText="@string/string_second_vacancies_title"
+        app:subtitleText="@string/string_second_vacancies_subtitle"
+        app:customImage="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/first_vacancies" />
+
+    <com.example.moroz_lesson3.AstonButtonView
+        android:id="@+id/third_vacancies"
+        android:layout_width="@dimen/customView_width"
+        android:layout_height="wrap_content"
+        app:titleText="@string/string_third_vacancies_title"
+        app:subtitleText="@string/string_third_vacancies_subtitle"
+        app:customImage="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/second_vacancies" />
+
+    <com.example.moroz_lesson3.AstonButtonView
+        android:id="@+id/fourth_vacancies"
+        android:layout_width="@dimen/customView_width"
+        android:layout_height="wrap_content"
+        app:titleText="@string/string_fourth_developer_title"
+        app:subtitleText="@string/string_fourth_vacancies_subtitle"
+        app:customImage="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/third_vacancies" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
