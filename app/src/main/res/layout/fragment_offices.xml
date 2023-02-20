@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OfficesFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/office_guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/office_guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/office_guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/moscow_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="To Moscow Detail"
+        app:layout_constraintBottom_toTopOf="@id/saint_petersburg_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toTopOf="@id/office_guideline_top"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saint_petersburg_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Saint-Petersburg Detail"
+        app:layout_constraintBottom_toTopOf="@id/kazan_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/moscow_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/kazan_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Kazan Detail"
+        app:layout_constraintBottom_toTopOf="@id/rostov_on_don_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/saint_petersburg_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rostov_on_don_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Rostov-on-Don Detail"
+        app:layout_constraintBottom_toTopOf="@id/almaty_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/kazan_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/almaty_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Almaty Detail"
+        app:layout_constraintBottom_toTopOf="@id/minsk_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/rostov_on_don_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minsk_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Minsk Detail"
+        app:layout_constraintBottom_toTopOf="@id/polotsk_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/almaty_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/polotsk_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Polotsk Detail"
+        app:layout_constraintBottom_toTopOf="@id/vitebsk_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/minsk_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/vitebsk_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="To Vitebsk Detail"
+        app:layout_constraintBottom_toTopOf="@id/gomel_office"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/polotsk_office" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gomel_office"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="To Gomel Detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/vitebsk_office" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
