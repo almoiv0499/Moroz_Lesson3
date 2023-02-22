@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.MainScreenFragment">
-
+    tools:context=".fragments.mainscreen.MainScreenFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
@@ -108,119 +107,8 @@
         style="@style/TextViewDescriptionStyle"
         android:text="@string/string_about_us_description"
         android:textSize="@dimen/textView_about_company_textSize"
-        app:layout_constraintBottom_toTopOf="@id/office_locations"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/about_us_title" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/office_locations"
-        style="@style/TextViewTitlesStyle"
-        android:gravity="center"
-        android:text="@string/string_office_locations"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/about_us_description" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/moscow_location"
-        style="@style/TextViewChipsStyle"
-        android:text="@string/string_moscow_location" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/kazan_location"
-        style="@style/TextViewChipsStyle"
-        android:text="@string/string_kazan_location" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/rostov_location"
-        style="@style/TextViewChipsStyle"
-        android:text="@string/string_rostov_on_don_location" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/minsk_location"
-        style="@style/TextViewChipsStyle"
-        android:text="@string/string_minsk_location" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/gomel_location"
-        style="@style/TextViewChipsStyle"
-        android:text="@string/string_gomel_location" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/flow_locations"
-        android:layout_width="@dimen/flow_width"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="moscow_location,kazan_location,rostov_location,minsk_location,gomel_location"
-        app:flow_horizontalBias="0"
-        app:flow_horizontalGap="@dimen/flow_horizontalGap"
-        app:flow_horizontalStyle="packed"
-        app:flow_verticalGap="@dimen/flow_verticalGap"
-        app:flow_wrapMode="chain"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/office_locations" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_contacts"
-        style="@style/CategoryButtonsStyle"
-        android:text="@string/string_contacts"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-        app:layout_constraintEnd_toStartOf="@id/button_vacancies"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/flow_locations"
-        app:layout_constraintVertical_bias="0" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_vacancies"
-        style="@style/CategoryButtonsStyle"
-        android:layout_marginStart="@dimen/button_marginStart"
-        android:layout_marginEnd="@dimen/button_marginEnd"
-        android:text="@string/string_vacancies"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-        app:layout_constraintEnd_toStartOf="@id/button_gallery"
-        app:layout_constraintStart_toEndOf="@id/button_contacts"
-        app:layout_constraintTop_toBottomOf="@id/flow_locations"
-        app:layout_constraintVertical_bias="0" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_gallery"
-        style="@style/CategoryButtonsStyle"
-        android:text="@string/string_gallery"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toEndOf="@id/button_vacancies"
-        app:layout_constraintTop_toBottomOf="@id/flow_locations"
-        app:layout_constraintVertical_bias="0" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group_visibility"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="office_locations,flow_locations,button_contacts,button_vacancies,button_gallery" />
-
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="@dimen/progressBar_width"
-        android:layout_height="@dimen/progressBar_height"
-        android:layout_margin="@dimen/progressBar_margin"
-        android:padding="@dimen/progressBar_padding"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/about_us_description" />
-
-    <com.example.moroz_lesson3.AstonButtonView
-        android:id="@+id/aston_button"
-        android:layout_width="@dimen/customView_width"
-        android:layout_height="wrap_content"
-        app:customImage="@drawable/logo"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintTop_toBottomOf="@id/button_contacts"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

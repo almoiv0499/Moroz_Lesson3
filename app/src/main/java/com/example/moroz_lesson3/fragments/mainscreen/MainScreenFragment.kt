@@ -1,4 +1,4 @@
-package com.example.moroz_lesson3.fragments
+package com.example.moroz_lesson3.fragments.mainscreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,10 @@ import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.FragmentMainScreenBinding
 
 class MainScreenFragment : Fragment() {
+
+    companion object {
+        fun newInstance() = MainScreenFragment()
+    }
 
     private var _binding: FragmentMainScreenBinding? = null
     private val binding get() = _binding!!

@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_app">#2987E4</color>
     <color name="color_chips">#CDD1D1</color>
+    <color name="error">#FF0000</color>
 </resources>
