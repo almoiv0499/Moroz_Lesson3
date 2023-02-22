@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.moroz_lesson3.R
+import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentMainScreenBinding
+import com.example.moroz_lesson3.fragments.authorization.AuthorizationFragment
 
 class MainScreenFragment : Fragment() {
 
@@ -23,6 +25,7 @@ class MainScreenFragment : Fragment() {
     ): View {
         _binding = FragmentMainScreenBinding.inflate(inflater, container, false)
 
+        (activity as MainActivity).checkFragment(this)
         return binding.root
     }
 

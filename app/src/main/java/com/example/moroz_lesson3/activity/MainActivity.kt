@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.ActivityMainBinding
+import com.example.moroz_lesson3.fragments.authorization.AuthorizationFragment
+import com.example.moroz_lesson3.fragments.details.OfficeDetailsFragment
 import com.example.moroz_lesson3.fragments.mainscreen.MainScreenFragment
 import com.example.moroz_lesson3.fragments.offices.OfficesFragment
 import com.example.moroz_lesson3.fragments.vacancies.VacanciesFragment
@@ -21,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navigate()
+        navigateByBottomNavigation()
     }
 
-    private fun navigate() {
+    private fun navigateByBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
-            when(menuItem.itemId) {
+            when (menuItem.itemId) {
                 R.id.home -> {
                     val fragment = MainScreenFragment.newInstance()
                     viewModel.navigationBetweenFragments(this, fragment)
@@ -44,6 +47,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+    }
+
+    fun checkFragment(fragment: Fragment) {
+        when (fragment) {
+            is AuthorizationFragment,
+            is OfficeDetailsFragment -> binding.bottomNavigation.visibility =View.GONE
+            else -> binding.bottomNavigation.visibility = View.VISIBLE
         }
     }
 }

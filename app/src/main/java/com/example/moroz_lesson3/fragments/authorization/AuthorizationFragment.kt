@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.moroz_lesson3.R
+import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentAuthorizationBinding
 import com.example.moroz_lesson3.fragments.base.BaseFragment
 
@@ -27,6 +28,7 @@ class AuthorizationFragment : BaseFragment<AuthorizationViewModel>() {
     ): View {
         _binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
 
+        (activity as MainActivity).checkFragment(this)
         return binding.root
     }
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficeDetailsBinding
 import com.example.moroz_lesson3.fragments.base.BaseFragment
 
@@ -36,6 +37,7 @@ class OfficeDetailsFragment : BaseFragment<OfficesDetailsViewModel>() {
     ): View {
         _binding = FragmentOfficeDetailsBinding.inflate(inflater, container, false)
 
+        (activity as MainActivity).checkFragment(this)
         return binding.root
     }
 

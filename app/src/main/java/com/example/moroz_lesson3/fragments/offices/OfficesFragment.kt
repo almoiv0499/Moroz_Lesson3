@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.moroz_lesson3.R
+import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficesBinding
 import com.example.moroz_lesson3.fragments.base.BaseFragment
 import com.example.moroz_lesson3.fragments.base.BaseViewModel
@@ -29,9 +30,14 @@ class OfficesFragment : BaseFragment<BaseViewModel>() {
     ): View {
         _binding = FragmentOfficesBinding.inflate(inflater, container, false)
 
-        navigateToOfficeDetailsFragment()
-
+        (activity as MainActivity).checkFragment(this)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navigateToOfficeDetailsFragment()
     }
 
     private fun navigateToOfficeDetailsFragment() {
