@@ -8,7 +8,7 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/vacancies_toolbar"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/toolbar_width"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_app"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,14 +24,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="10dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_begin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vacancies_guideline_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="10dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_end" />
 
     <com.example.moroz_lesson3.AstonButtonView
         android:id="@+id/first_vacancies"

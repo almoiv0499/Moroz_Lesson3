@@ -8,8 +8,8 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.example.moroz_lesson3.fragments.authorization.AuthorizationFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/fragmentContainer_width"
+        android:layout_height="@dimen/fragmentContainer_height"
         tools:layout="@layout/fragment_authorization"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

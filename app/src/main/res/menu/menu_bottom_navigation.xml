@@ -6,21 +6,21 @@
         android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        android:title="Home"
+        android:title="@string/string_home"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/vacancies"
         android:enabled="true"
         android:icon="@drawable/ic_vacancies_list"
-        android:title="Vacancies"
+        android:title="@string/string_vacancies"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/offices"
         android:enabled="true"
         android:icon="@drawable/ic_offices_list"
-        android:title="Offices"
+        android:title="@string/string_offices"
         app:showAsAction="ifRoom" />
 
 </menu>

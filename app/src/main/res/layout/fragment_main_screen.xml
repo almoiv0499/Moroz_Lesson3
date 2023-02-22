@@ -8,7 +8,7 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/vacancies_toolbar"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/toolbar_width"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_app"
         app:layout_constraintEnd_toEndOf="parent"

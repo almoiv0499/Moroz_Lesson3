@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleCentered="true"
-        app:title="@string/string_login"
+        app:title="@string/string_welcome"
         app:titleTextColor="@color/white"
         />
 
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Вход"
+        android:text="@string/string_sign_in"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -68,7 +68,7 @@
             android:id="@+id/input_username"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Username"
+            android:hint="@string/hint_username"
             android:imeOptions="actionNext"
             android:inputType="text" />
 
@@ -90,7 +90,7 @@
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -100,7 +100,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="Войти"
+        android:text="@string/string_sign_in"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/authorization_guideline_bottom"

@@ -8,7 +8,7 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/offices_toolbar"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/toolbar_width"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_app"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,21 +23,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="30dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_details_begin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/office_guideline_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="30dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_details_end" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/moscow_office"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/button_details_width"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Moscow"
+        android:layout_marginBottom="@dimen/button_details_marginBottom"
+        android:text="@string/string_moscow"
         app:layout_constraintBottom_toTopOf="@id/kazan_office"
         app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_guideline_start"
@@ -46,11 +46,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/kazan_office"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/button_details_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Kazan"
+        android:layout_marginTop="@dimen/button_details_marginTop"
+        android:layout_marginBottom="@dimen/button_details_marginBottom"
+        android:text="@string/string_kazan"
         app:layout_constraintBottom_toTopOf="@id/rostov_on_don_office"
         app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_guideline_start"
@@ -58,11 +58,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/rostov_on_don_office"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/button_details_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Rostov-on-Don"
+        android:layout_marginTop="@dimen/button_details_marginTop"
+        android:layout_marginBottom="@dimen/button_details_marginBottom"
+        android:text="@string/string_rostov_on_don"
         app:layout_constraintBottom_toTopOf="@id/minsk_office"
         app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_guideline_start"
@@ -70,11 +70,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/minsk_office"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/button_details_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Minsk"
+        android:layout_marginTop="@dimen/button_details_marginTop"
+        android:layout_marginBottom="@dimen/button_details_marginBottom"
+        android:text="@string/string_minsk"
         app:layout_constraintBottom_toTopOf="@id/gomel_office"
         app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_guideline_start"
@@ -82,10 +82,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/gomel_office"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/button_details_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Gomel"
+        android:layout_marginTop="@dimen/button_details_marginTop"
+        android:text="@string/string_gomel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_guideline_start"

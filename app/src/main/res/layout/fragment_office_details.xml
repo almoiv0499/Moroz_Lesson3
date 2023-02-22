@@ -8,7 +8,7 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/office_details_toolbar"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/toolbar_width"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_app"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,23 +24,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="10dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_begin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/office_details_guideline_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="10dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_end" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/address"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/textView_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/textView_offices_marginTop"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="23sp"
+        android:textSize="@dimen/textView_offices_textSize"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/office_details_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_details_guideline_start"
