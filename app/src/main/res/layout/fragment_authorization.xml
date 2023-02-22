@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".fragments.authorization.AuthorizationFragment">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/authorization_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true"
+        app:title="@string/string_login"
+        app:titleTextColor="@color/white"
+        />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/authorization_guideline_start"
         android:layout_width="wrap_content"
@@ -21,13 +34,6 @@
         app:layout_constraintGuide_end="15dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/authorization_guideline_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="50dp" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/authorization_guideline_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,6 +44,7 @@
         android:id="@+id/welcome_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Вход"
         android:textColor="@color/black"
@@ -45,7 +52,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/authorization_guideline_end"
         app:layout_constraintStart_toStartOf="@id/authorization_guideline_start"
-        app:layout_constraintTop_toTopOf="@id/authorization_guideline_top" />
+        app:layout_constraintTop_toBottomOf="@id/authorization_toolbar" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_username_layout"

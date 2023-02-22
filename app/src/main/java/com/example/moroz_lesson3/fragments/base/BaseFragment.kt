@@ -28,11 +28,8 @@ abstract class BaseFragment<VM : BaseViewModel> : Fragment() {
 
     private fun handleNavigation(navigation: Navigation) {
         when(navigation) {
-            is Navigation.ToFragmentWithoutBackStack -> {
-                navigateWithoutBackStack(navigation.fragment)
-            }
-            is Navigation.ToFragmentWithBackStack -> {
-                navigateWithBackStack(navigation.fragment)
+            is Navigation.ToFragment -> {
+                launchFragment(navigation.fragment)
             }
             is Navigation.ToBack -> {
                 navigateBack()
@@ -44,23 +41,13 @@ abstract class BaseFragment<VM : BaseViewModel> : Fragment() {
         activity?.supportFragmentManager?.popBackStack()
     }
 
-    private fun navigateWithBackStack(fragment: Fragment) {
+    private fun launchFragment(fragment: Fragment) {
         activity?.let {
             it.supportFragmentManager.commit {
                 replace(R.id.fragment_container, fragment)
                 addToBackStack(null)
             }
         }
-    }
-
-    private fun navigateWithoutBackStack(fragment: Fragment) {
-        Handler(Looper.getMainLooper()).postDelayed({
-            activity?.let {
-                it.supportFragmentManager.commit {
-                    replace(R.id.fragment_container, fragment)
-                }
-            }
-        }, 1000)
     }
 
 }

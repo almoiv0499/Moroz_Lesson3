@@ -18,8 +18,6 @@
     <string name="logo_custom_view">Logo custom view</string>
     <string name="title_customView">Android trainee</string>
     <string name="subtitle_customView">Стажировка по направлению Android</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="string_first_vacancies_title">Android developer</string>
     <string name="string_first_vacancies_subtitle">Aston engineers develop many Android solutions and cross-platform applications with rich functionality</string>
     <string name="string_second_vacancies_subtitle">Aston engineers use modern frameworks to solve your business problems, including Vue.js, Angular and React.js</string>
@@ -28,4 +26,10 @@
     <string name="string_third_vacancies_title">Java developer</string>
     <string name="string_fourth_developer_title">iOS developer</string>
     <string name="string_fourth_vacancies_subtitle">Aston specialists develop many iOS solutions and high-performance cross-platform applications with wide functionality</string>
+    <string name="moscow_address">Пресненская набережная, д.6, стр.2, БЦ "Башня Империя", 3 подъезд, 53 этаж, офис 13, Россия</string>
+    <string name="kazan_address">ул. Н. Ершова, 76/1, оф. 213, Россия</string>
+    <string name="rostovOnDon_address">ул. Текучева, 246, 3 этаж, Россия</string>
+    <string name="minsk_address">пр-т Победителей, 7А, Беларусь</string>
+    <string name="gomel_address">ул. Советская, 41Б, Беларусь</string>
+    <string name="string_login">Login</string>
 </resources>

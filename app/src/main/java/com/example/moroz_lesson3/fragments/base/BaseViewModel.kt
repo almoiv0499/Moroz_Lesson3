@@ -12,12 +12,8 @@ abstract class BaseViewModel : ViewModel() {
     private val _liveDataNavigation = MutableLiveData<Event<Navigation>>()
     val liveDataNavigation: LiveData<Event<Navigation>> = _liveDataNavigation
 
-    fun navigateToFragmentWithBackStack(fragment: Fragment) {
-        _liveDataNavigation.value = Event(Navigation.ToFragmentWithBackStack(fragment))
-    }
-
-    fun navigateToFragmentWithoutBackStack(fragment: Fragment) {
-        _liveDataNavigation.value = Event(Navigation.ToFragmentWithoutBackStack(fragment))
+    fun launchFragment(fragment: Fragment) {
+        _liveDataNavigation.value = Event(Navigation.ToFragment(fragment))
     }
 
     fun navigateToBack() {
