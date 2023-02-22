@@ -14,8 +14,4 @@ class MainActivityViewModel : ViewModel() {
         }
     }
 
-    fun back() {
-
-    }
-
 }

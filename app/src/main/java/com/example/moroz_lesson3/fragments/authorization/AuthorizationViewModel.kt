@@ -9,7 +9,7 @@ class AuthorizationViewModel : BaseViewModel() {
 
     fun navigateToMainScreenFragment() {
         Handler(Looper.getMainLooper()).postDelayed({
-            launchFragment(MainScreenFragment.newInstance())
+            launchFragmentWithoutBackStack(MainScreenFragment.newInstance())
         }, 1500)
     }
 

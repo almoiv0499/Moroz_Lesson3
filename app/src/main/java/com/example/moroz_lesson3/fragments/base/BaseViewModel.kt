@@ -16,6 +16,10 @@ abstract class BaseViewModel : ViewModel() {
         _liveDataNavigation.value = Event(Navigation.ToFragment(fragment))
     }
 
+    fun launchFragmentWithoutBackStack(fragment: Fragment) {
+        _liveDataNavigation.value = Event(Navigation.ToFragmentWithoutBackStack(fragment))
+    }
+
     fun navigateToBack() {
         _liveDataNavigation.value = Event(Navigation.ToBack)
     }

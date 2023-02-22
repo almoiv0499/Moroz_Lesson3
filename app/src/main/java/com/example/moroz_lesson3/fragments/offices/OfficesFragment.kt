@@ -4,14 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficesBinding
 import com.example.moroz_lesson3.fragments.base.BaseFragment
 import com.example.moroz_lesson3.fragments.base.BaseViewModel
-import kotlin.math.min
 
 class OfficesFragment : BaseFragment<BaseViewModel>() {
 

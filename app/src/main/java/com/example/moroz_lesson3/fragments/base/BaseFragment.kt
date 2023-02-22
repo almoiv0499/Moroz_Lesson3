@@ -1,8 +1,6 @@
 package com.example.moroz_lesson3.fragments.base
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -31,6 +29,9 @@ abstract class BaseFragment<VM : BaseViewModel> : Fragment() {
             is Navigation.ToFragment -> {
                 launchFragment(navigation.fragment)
             }
+            is Navigation.ToFragmentWithoutBackStack -> {
+                launchFragmentWithoutBackStack(navigation.fragmentWithoutBackStack)
+            }
             is Navigation.ToBack -> {
                 navigateBack()
             }
@@ -39,6 +40,14 @@ abstract class BaseFragment<VM : BaseViewModel> : Fragment() {
 
     private fun navigateBack() {
         activity?.supportFragmentManager?.popBackStack()
+    }
+
+    private fun launchFragmentWithoutBackStack(fragment: Fragment) {
+        activity?.let {
+            it.supportFragmentManager.commit {
+                replace(R.id.fragment_container, fragment)
+            }
+        }
     }
 
     private fun launchFragment(fragment: Fragment) {
