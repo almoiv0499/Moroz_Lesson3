@@ -8,7 +8,7 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/authorization_toolbar"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/toolbar_width"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_app"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,31 +24,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="15dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_authorization_begin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/authorization_guideline_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="15dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_authorization_end" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/authorization_guideline_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="20dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_authorization_bottom" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/welcome_info"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/textView_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/textView_authorization_marginTop"
         android:gravity="center"
         android:text="@string/string_sign_in"
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="@dimen/textView_authorization_textSize"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/authorization_guideline_end"
         app:layout_constraintStart_toStartOf="@id/authorization_guideline_start"
@@ -56,9 +56,9 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_username_layout"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/editText_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/editText_marginTop_username"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@id/authorization_guideline_end"
         app:layout_constraintStart_toStartOf="@id/authorization_guideline_start"
@@ -76,9 +76,9 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_password_layout"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/editText_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/editText_marginTop_password"
         app:errorEnabled="true"
         app:errorIconDrawable="@drawable/baseline_error_24"
         app:layout_constraintEnd_toEndOf="@id/authorization_guideline_end"
@@ -97,11 +97,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_button"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/string_sign_in"
-        android:textSize="18sp"
+        android:textSize="@dimen/button_authorization_textSize"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/authorization_guideline_bottom"
         app:layout_constraintEnd_toEndOf="@id/authorization_guideline_end"

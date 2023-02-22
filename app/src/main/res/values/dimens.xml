@@ -9,6 +9,9 @@
     <dimen name="guideline_end">10dp</dimen>
     <dimen name="guideline_details_begin">30dp</dimen>
     <dimen name="guideline_details_end">30dp</dimen>
+    <dimen name="guideline_authorization_begin">15dp</dimen>
+    <dimen name="guideline_authorization_end">15dp</dimen>
+    <dimen name="guideline_authorization_bottom">20dp</dimen>
 
     <!-- Barrier -->
     <dimen name="barrier_width">0dp</dimen>
@@ -24,7 +27,8 @@
     <dimen name="button_textSize">13sp</dimen>
     <dimen name="button_details_marginBottom">5dp</dimen>
     <dimen name="button_details_marginTop">5dp</dimen>
-    <dimen name="button_details_width">0dp</dimen>
+    <dimen name="button_width">0dp</dimen>
+    <dimen name="button_authorization_textSize">18sp</dimen>
 
     <!-- TextView -->
     <dimen name="textView_marginTop">5dp</dimen>
@@ -36,6 +40,8 @@
     <dimen name="textView_about_company_textSize">19sp</dimen>
     <dimen name="textView_offices_marginTop">15dp</dimen>
     <dimen name="textView_offices_textSize">23sp</dimen>
+    <dimen name="textView_authorization_marginTop">20dp</dimen>
+    <dimen name="textView_authorization_textSize">40sp</dimen>
 
     <!-- ImageView -->
     <dimen name="imageView_width_by_fill">0dp</dimen>
@@ -68,5 +74,10 @@
 
     <!-- Toolbar -->
     <dimen name="toolbar_width">0dp</dimen>
+
+    <!-- EditText -->
+    <dimen name="editText_width">0dp</dimen>
+    <dimen name="editText_marginTop_username">20dp</dimen>
+    <dimen name="editText_marginTop_password">10dp</dimen>
 
 </resources>

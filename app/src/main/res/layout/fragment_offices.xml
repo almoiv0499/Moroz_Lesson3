@@ -34,7 +34,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/moscow_office"
-        android:layout_width="@dimen/button_details_width"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_details_marginBottom"
         android:text="@string/string_moscow"
@@ -46,7 +46,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/kazan_office"
-        android:layout_width="@dimen/button_details_width"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_details_marginTop"
         android:layout_marginBottom="@dimen/button_details_marginBottom"
@@ -58,7 +58,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/rostov_on_don_office"
-        android:layout_width="@dimen/button_details_width"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_details_marginTop"
         android:layout_marginBottom="@dimen/button_details_marginBottom"
@@ -70,7 +70,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/minsk_office"
-        android:layout_width="@dimen/button_details_width"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_details_marginTop"
         android:layout_marginBottom="@dimen/button_details_marginBottom"
@@ -82,7 +82,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/gomel_office"
-        android:layout_width="@dimen/button_details_width"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_details_marginTop"
         android:text="@string/string_gomel"
