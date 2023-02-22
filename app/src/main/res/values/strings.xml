@@ -32,4 +32,7 @@
     <string name="minsk_address">пр-т Победителей, 7А, Беларусь</string>
     <string name="gomel_address">ул. Советская, 41Б, Беларусь</string>
     <string name="string_login">Login</string>
+    <string name="string_home">Home</string>
+    <string name="string_vacancies_toolbar">Vacancies</string>
+    <string name="string_offices">Offices</string>
 </resources>

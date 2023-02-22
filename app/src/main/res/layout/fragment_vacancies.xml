@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".fragments.vacancies.VacanciesFragment">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/vacancies_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true"
+        app:title="@string/string_vacancies_toolbar"
+        app:titleTextColor="@color/white"
+        />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vacancies_guideline_start"
         android:layout_width="wrap_content"
@@ -20,13 +33,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="10dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vacancies_guideline_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="10dp" />
-
     <com.example.moroz_lesson3.AstonButtonView
         android:id="@+id/first_vacancies"
         android:layout_width="@dimen/customView_width"
@@ -36,7 +42,7 @@
         app:customImage="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
         app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
-        app:layout_constraintTop_toTopOf="@id/vacancies_guideline_top" />
+        app:layout_constraintTop_toBottomOf="@id/vacancies_toolbar"/>
 
     <com.example.moroz_lesson3.AstonButtonView
         android:id="@+id/second_vacancies"
@@ -59,16 +65,5 @@
         app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
         app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
         app:layout_constraintTop_toBottomOf="@id/second_vacancies" />
-
-    <com.example.moroz_lesson3.AstonButtonView
-        android:id="@+id/fourth_vacancies"
-        android:layout_width="@dimen/customView_width"
-        android:layout_height="wrap_content"
-        app:titleText="@string/string_fourth_developer_title"
-        app:subtitleText="@string/string_fourth_vacancies_subtitle"
-        app:customImage="@drawable/ic_launcher_foreground"
-        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
-        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/third_vacancies" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
