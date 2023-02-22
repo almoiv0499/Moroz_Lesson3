@@ -1,11 +1,13 @@
 package com.example.moroz_lesson3.fragments.authorization
 
 import android.os.Bundle
-import android.view.KeyEvent
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.FragmentAuthorizationBinding
 import com.example.moroz_lesson3.fragments.base.BaseFragment
 
@@ -31,40 +33,59 @@ class AuthorizationFragment : BaseFragment<AuthorizationViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        accessUsernameAndPassword()
+        setListenersToUsernameAndPassword()
         navigateToMainScreenFragment()
     }
 
-    private fun accessUsernameAndPassword() {
+    private fun setListenersToUsernameAndPassword() {
         with(binding) {
-            inputUsernameLayout.editText?.setOnKeyListener { _, keyCode, event ->
-                if ((event.action == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    verifyUsernameAndPassword()
-                    true
-                } else {
-                    false
-                }
+            inputPasswordLayout.editText?.addTextChangedListener(textWatcher(binding.inputPassword))
+            inputUsernameLayout.editText?.addTextChangedListener(textWatcher(binding.inputUsername))
+        }
+    }
+
+    private fun textWatcher(view: View): TextWatcher {
+        return object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
-            inputPasswordLayout.editText?.setOnKeyListener { _, keyCode, event ->
-                if ((event.action == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    verifyUsernameAndPassword()
-                    true
-                } else {
-                    false
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                when (view.id) {
+                    R.id.input_password -> {
+                        validatePassword()
+                    }
+                    R.id.input_username -> {
+                        validateUsername()
+                    }
                 }
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
             }
         }
     }
 
-    private fun verifyUsernameAndPassword() {
-        with(binding) {
-            val username = inputUsernameLayout.editText?.text.toString().trim()
-            val password = inputPasswordLayout.editText?.text.toString().trim()
-            if (username.isNotEmpty() && password == PASSWORD) {
-                loginButton.isEnabled = true
-                inputUsernameLayout.isErrorEnabled = false
-                inputPasswordLayout.isErrorEnabled = false
-            }
+    private fun validateUsername(): Boolean {
+        val username = binding.inputUsername.text.toString().trim()
+        return if (username.length > 3) {
+            binding.inputUsernameLayout.error = ""
+            true
+        } else {
+            binding.inputUsernameLayout.error = "Symbols count less 3"
+            false
+        }
+    }
+
+    private fun validatePassword(): Boolean {
+        val password = binding.inputPassword.text.toString().trim()
+        return if (password == PASSWORD) {
+            binding.inputPasswordLayout.error = ""
+            binding.loginButton.isEnabled = true
+            true
+        } else {
+            binding.inputPasswordLayout.error = "Wrong password"
+            false
         }
     }
 
