@@ -23,7 +23,6 @@ class MainScreenFragment : Fragment(), CustomizeToolbar {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentMainScreenBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 

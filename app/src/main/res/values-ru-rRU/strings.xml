@@ -40,4 +40,6 @@
     <string name="hint_username">Имя пользователя</string>
     <string name="hint_password">Пароль</string>
     <string name="string_welcome">Добро пожаловать</string>
+    <string name="editText_username_error">Неверное имя пользователя</string>
+    <string name="editText_password_error">Неверный пароль</string>
 </resources>

@@ -1,18 +1,15 @@
 package com.example.moroz_lesson3.fragments.util
 
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.activity.MainActivity
-import com.example.moroz_lesson3.fragments.authorization.AuthorizationFragment
 import com.example.moroz_lesson3.fragments.details.OfficeDetailsFragment
 import com.example.moroz_lesson3.fragments.mainscreen.MainScreenFragment
 import com.example.moroz_lesson3.fragments.offices.OfficesFragment
 import com.example.moroz_lesson3.fragments.vacancies.VacanciesFragment
 import com.example.moroz_lesson3.model.Office
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 object NavigationImpl : Navigation {
 

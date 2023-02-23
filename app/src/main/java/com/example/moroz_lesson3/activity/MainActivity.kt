@@ -2,7 +2,6 @@ package com.example.moroz_lesson3.activity
 
 import android.os.Bundle
 import android.view.View
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -18,7 +17,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val currentFragment: Fragment get() = supportFragmentManager.findFragmentById(R.id.fragment_container)!!
+    private val currentFragment: Fragment
+        get() = supportFragmentManager.findFragmentById(R.id.fragment_container)!!
+
     private val fragmentListener = object : FragmentManager.FragmentLifecycleCallbacks() {
         override fun onFragmentViewCreated(
             fm: FragmentManager,

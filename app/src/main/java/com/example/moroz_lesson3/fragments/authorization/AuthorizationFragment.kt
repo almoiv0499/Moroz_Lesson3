@@ -15,6 +15,7 @@ import com.example.moroz_lesson3.fragments.util.navigation
 class AuthorizationFragment : Fragment(), CustomizeToolbar {
 
     companion object {
+        private const val USERNAME = "aleks"
         private const val PASSWORD = "password123"
     }
 
@@ -26,7 +27,6 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
@@ -52,10 +52,10 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 when (view.id) {
                     R.id.input_password -> {
-                        validatePassword()
+                        validateUsernameAndPassword()
                     }
                     R.id.input_username -> {
-                        validateUsername()
+                        validateUsernameAndPassword()
                     }
                 }
 
@@ -66,13 +66,17 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
         }
     }
 
+    private fun validateUsernameAndPassword() {
+        binding.loginButton.isEnabled = validateUsername() && validatePassword()
+    }
+
     private fun validateUsername(): Boolean {
         val username = binding.inputUsername.text.toString().trim()
-        return if (username.length > 3) {
+        return if (username == USERNAME) {
             binding.inputUsernameLayout.error = ""
             true
         } else {
-            binding.inputUsernameLayout.error = "Symbols count less 3"
+            binding.inputUsernameLayout.error = getString(R.string.editText_username_error)
             false
         }
     }
@@ -81,10 +85,9 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
         val password = binding.inputPassword.text.toString().trim()
         return if (password == PASSWORD) {
             binding.inputPasswordLayout.error = ""
-            binding.loginButton.isEnabled = true
             true
         } else {
-            binding.inputPasswordLayout.error = "Wrong password"
+            binding.inputPasswordLayout.error = getString(R.string.editText_password_error)
             false
         }
     }

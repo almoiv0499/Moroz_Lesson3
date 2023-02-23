@@ -25,7 +25,6 @@ class OfficesFragment : Fragment(), CustomizeToolbar {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentOfficesBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 

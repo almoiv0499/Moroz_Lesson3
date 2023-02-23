@@ -23,7 +23,6 @@ class VacanciesFragment : Fragment(), CustomizeToolbar {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentVacanciesBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 

@@ -43,4 +43,6 @@
     <string name="gomel_address">st. Sovetskaya, 41B, Belarus</string>
     <string name="string_welcome">Welcome</string>
     <string name="phone_number">+7(495)138–39–39</string>
+    <string name="editText_username_error">Wrond username</string>
+    <string name="editText_password_error">Wrong password</string>
 </resources>
