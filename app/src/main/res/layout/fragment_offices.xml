@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.offices.OfficesFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/offices_toolbar"
-        android:layout_width="@dimen/toolbar_width"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/color_app"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/string_offices"
-        app:titleCentered="true"
-        app:titleTextColor="@color/white" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/office_guideline_start"
         android:layout_width="wrap_content"
@@ -41,7 +29,7 @@
         app:layout_constraintBottom_toTopOf="@id/kazan_office"
         app:layout_constraintEnd_toEndOf="@id/office_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/offices_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.button.MaterialButton

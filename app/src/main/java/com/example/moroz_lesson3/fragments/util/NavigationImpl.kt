@@ -9,10 +9,12 @@ import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.fragments.authorization.AuthorizationFragment
 import com.example.moroz_lesson3.fragments.details.OfficeDetailsFragment
 import com.example.moroz_lesson3.fragments.mainscreen.MainScreenFragment
+import com.example.moroz_lesson3.fragments.offices.OfficesFragment
+import com.example.moroz_lesson3.fragments.vacancies.VacanciesFragment
 import com.example.moroz_lesson3.model.Office
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-object NavigationImpl : Navigator {
+object NavigationImpl : Navigation {
 
     private var activity: MainActivity? = null
 
@@ -24,15 +26,18 @@ object NavigationImpl : Navigator {
         launchModeFromAuthorization()
     }
 
-    override fun navigateToMainScreenInBottomNavigation(fragment: Fragment) {
+    override fun navigateToMainScreenInBottomNavigation() {
+        val fragment = MainScreenFragment.newInstance()
         launchModeWithPopBackStack(fragment)
     }
 
-    override fun navigateToVacanciesInBottomNavigation(fragment: Fragment) {
+    override fun navigateToVacanciesInBottomNavigation() {
+        val fragment = VacanciesFragment.newInstance()
         launchModeWithPopBackStack(fragment)
     }
 
-    override fun navigateToOfficesInBottomNavigation(fragment: Fragment) {
+    override fun navigateToOfficesInBottomNavigation() {
+        val fragment = OfficesFragment.newInstance()
         launchModeWithPopBackStack(fragment)
     }
 

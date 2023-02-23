@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.FragmentVacanciesBinding
+import com.example.moroz_lesson3.fragments.util.CustomizeToolbar
 
-class VacanciesFragment : Fragment() {
+class VacanciesFragment : Fragment(), CustomizeToolbar {
 
     companion object {
         fun newInstance() = VacanciesFragment()
@@ -24,6 +26,8 @@ class VacanciesFragment : Fragment() {
 
         return binding.root
     }
+
+    override fun setToolbarTitle(): Int = R.string.string_vacancies
 
     override fun onDestroyView() {
         super.onDestroyView()

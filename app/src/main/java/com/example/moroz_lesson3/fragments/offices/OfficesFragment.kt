@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.R
-import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficesBinding
+import com.example.moroz_lesson3.fragments.util.CustomizeToolbar
 
-class OfficesFragment : Fragment() {
+class OfficesFragment : Fragment(), CustomizeToolbar {
 
     companion object {
         fun newInstance() = OfficesFragment()
@@ -24,7 +24,6 @@ class OfficesFragment : Fragment() {
     ): View {
         _binding = FragmentOfficesBinding.inflate(inflater, container, false)
 
-        (activity as MainActivity).checkFragment(this)
         return binding.root
     }
 
@@ -53,6 +52,8 @@ class OfficesFragment : Fragment() {
             }
         }
     }
+
+    override fun setToolbarTitle(): Int = R.string.string_offices
 
     override fun onDestroyView() {
         super.onDestroyView()

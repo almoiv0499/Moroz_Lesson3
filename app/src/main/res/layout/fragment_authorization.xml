@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.authorization.AuthorizationFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/authorization_toolbar"
-        android:layout_width="@dimen/toolbar_width"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/color_app"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleCentered="true"
-        app:title="@string/string_welcome"
-        app:titleTextColor="@color/white"
-        />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/authorization_guideline_start"
         android:layout_width="wrap_content"
@@ -52,7 +39,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/authorization_guideline_end"
         app:layout_constraintStart_toStartOf="@id/authorization_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/authorization_toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_username_layout"

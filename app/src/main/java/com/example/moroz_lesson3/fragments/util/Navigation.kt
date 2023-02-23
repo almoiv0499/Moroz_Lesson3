@@ -3,15 +3,15 @@ package com.example.moroz_lesson3.fragments.util
 import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.model.Office
 
-interface Navigator {
+interface Navigation {
 
     fun navigateFromAuthorizationToMainScreen()
 
-    fun navigateToMainScreenInBottomNavigation(fragment: Fragment)
+    fun navigateToMainScreenInBottomNavigation()
 
-    fun navigateToVacanciesInBottomNavigation(fragment: Fragment)
+    fun navigateToVacanciesInBottomNavigation()
 
-    fun navigateToOfficesInBottomNavigation(fragment: Fragment)
+    fun navigateToOfficesInBottomNavigation()
 
     fun navigateToOfficesDetails(office: Office)
 
@@ -20,4 +20,4 @@ interface Navigator {
     fun bottomNavigationVisibility(fragment: Fragment)
 }
 
-fun Fragment.navigation(): Navigator = requireActivity() as Navigator
+fun Fragment.navigation(): Navigation = NavigationImpl

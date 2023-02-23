@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.vacancies.VacanciesFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/vacancies_toolbar"
-        android:layout_width="@dimen/toolbar_width"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/color_app"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleCentered="true"
-        app:title="@string/string_vacancies_toolbar"
-        app:titleTextColor="@color/white"
-        />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vacancies_guideline_start"
         android:layout_width="wrap_content"
@@ -42,7 +29,7 @@
         app:customImage="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
         app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/vacancies_toolbar"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.example.moroz_lesson3.AstonButtonView
         android:id="@+id/second_vacancies"

@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficeDetailsBinding
+import com.example.moroz_lesson3.fragments.util.CustomizeToolbar
 import com.example.moroz_lesson3.model.Office
 import com.example.moroz_lesson3.model.parcelable
 
-class OfficeDetailsFragment : Fragment() {
+class OfficeDetailsFragment : Fragment(), CustomizeToolbar {
 
     companion object {
         private const val OFFICE_KEY = "office_key"
@@ -34,7 +36,6 @@ class OfficeDetailsFragment : Fragment() {
     ): View {
         _binding = FragmentOfficeDetailsBinding.inflate(inflater, container, false)
 
-        (activity as MainActivity).checkFragment(this)
         return binding.root
     }
 
@@ -42,14 +43,12 @@ class OfficeDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setCityInfoToScreen()
-        navigateToOfficesFragment()
     }
 
     private fun setCityInfoToScreen() {
         val office = getOfficeData()
         if (office != null) {
             with(binding) {
-                officeDetailsToolbar.title = office.city
                 address.text = office.address
             }
         }
@@ -59,9 +58,22 @@ class OfficeDetailsFragment : Fragment() {
         return arguments?.parcelable(OFFICE_KEY)
     }
 
-    private fun navigateToOfficesFragment() {
-        binding.officeDetailsToolbar.setNavigationOnClickListener {
+    override fun setToolbarTitle(): Int {
+        val office = getOfficeData()
+        return if (office != null) {
+            getCityName(office)
+        } else {
+            R.string.string_offices
         }
+    }
+
+    private fun getCityName(office: Office): Int = when (office.city) {
+        getString(R.string.string_moscow) -> R.string.string_moscow
+        getString(R.string.string_kazan) -> R.string.string_kazan
+        getString(R.string.string_rostov_on_don) -> R.string.string_rostov_on_don
+        getString(R.string.string_minsk) -> R.string.string_minsk
+        getString(R.string.string_gomel) -> R.string.string_gomel
+        else -> R.string.string_offices
     }
 
     override fun onDestroyView() {
