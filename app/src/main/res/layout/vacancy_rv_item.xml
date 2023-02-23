@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/customView_margin"
+    android:backgroundTint="#F0F0F0"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/customView_padding"
+    app:cardCornerRadius="@dimen/customView_cornerRadius"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/customView_padding">
+
+        <ImageView
+            android:id="@+id/logo_customView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/logo_custom_view"
+            android:src="@drawable/ic_java"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_customView"
+            android:layout_width="@dimen/customView_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_customView"
+            android:textColor="@color/black"
+            android:textSize="@dimen/customView_titleTextSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_customView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subtitle_customView"
+            android:layout_width="@dimen/customView_width"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/textView_padding"
+            android:text="@string/subtitle_customView"
+            android:textColor="@color/black"
+            android:textSize="@dimen/customView_subtitleTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_customView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -20,37 +20,46 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/guideline_end" />
 
-    <com.example.moroz_lesson3.AstonButtonView
-        android:id="@+id/first_vacancies"
-        android:layout_width="@dimen/customView_width"
-        app:titleText="@string/string_first_vacancies_title"
-        app:subtitleText="@string/string_first_vacancies_subtitle"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vacancies_guideline_top"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:customImage="@drawable/ic_launcher_foreground"
-        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
-        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
-    <com.example.moroz_lesson3.AstonButtonView
-        android:id="@+id/second_vacancies"
-        android:layout_width="@dimen/customView_width"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vacancies_guideline_bottom"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:titleText="@string/string_second_vacancies_title"
-        app:subtitleText="@string/string_second_vacancies_subtitle"
-        app:customImage="@drawable/ic_launcher_foreground"
-        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
-        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/first_vacancies" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
 
-    <com.example.moroz_lesson3.AstonButtonView
-        android:id="@+id/third_vacancies"
-        android:layout_width="@dimen/customView_width"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filter_vacancies"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:titleText="@string/string_third_vacancies_title"
-        app:subtitleText="@string/string_third_vacancies_subtitle"
-        app:customImage="@drawable/ic_launcher_foreground"
+        app:endIconMode="clear_text"
+        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
+        app:layout_constraintTop_toTopOf="@id/vacancies_guideline_top">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Vacancy"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_vacancies"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/vacancies_guideline_bottom"
         app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
         app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/second_vacancies" />
+        app:layout_constraintTop_toBottomOf="@id/filter_vacancies"
+        tools:listitem="@layout/vacancy_rv_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
