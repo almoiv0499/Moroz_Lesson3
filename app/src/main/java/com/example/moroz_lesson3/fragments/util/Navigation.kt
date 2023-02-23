@@ -16,8 +16,6 @@ interface Navigation {
     fun navigateToOfficesDetails(office: Office)
 
     fun navigateBack()
-
-    fun bottomNavigationVisibility(fragment: Fragment)
 }
 
 fun Fragment.navigation(): Navigation = NavigationImpl

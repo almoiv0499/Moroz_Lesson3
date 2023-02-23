@@ -27,7 +27,6 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
     ): View {
         _binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
 
-        navigation().bottomNavigationVisibility(this)
         return binding.root
     }
 

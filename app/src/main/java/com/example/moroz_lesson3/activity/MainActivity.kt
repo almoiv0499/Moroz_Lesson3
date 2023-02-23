@@ -1,9 +1,8 @@
 package com.example.moroz_lesson3.activity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
-import androidx.activity.viewModels
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -11,14 +10,9 @@ import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.ActivityMainBinding
 import com.example.moroz_lesson3.fragments.authorization.AuthorizationFragment
 import com.example.moroz_lesson3.fragments.details.OfficeDetailsFragment
-import com.example.moroz_lesson3.fragments.mainscreen.MainScreenFragment
-import com.example.moroz_lesson3.fragments.offices.OfficesFragment
+import com.example.moroz_lesson3.fragments.util.CustomizeOfficeToolbar
 import com.example.moroz_lesson3.fragments.util.CustomizeToolbar
-import com.example.moroz_lesson3.fragments.util.Navigation
 import com.example.moroz_lesson3.fragments.util.NavigationImpl
-import com.example.moroz_lesson3.fragments.vacancies.VacanciesFragment
-import com.example.moroz_lesson3.model.Office
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
 
         register()
         navigateByBottomNavigation()
@@ -81,12 +76,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI() {
-        bottomNavigationVisibility()
-        customizeToolbar()
+        val fragment = currentFragment
+        bottomNavigationVisibility(fragment)
+        customizeToolbar(fragment)
+        customizeOfficeToolbar(fragment)
     }
 
-    private fun bottomNavigationVisibility() {
-        when (currentFragment) {
+    private fun bottomNavigationVisibility(fragment: Fragment) {
+        when (fragment) {
             is AuthorizationFragment,
             is OfficeDetailsFragment,
             -> binding.bottomNavigation.visibility = View.GONE
@@ -94,10 +91,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun customizeToolbar() {
-        when(val fragment = currentFragment) {
+    private fun customizeToolbar(fragment: Fragment) {
+        when (fragment) {
             is CustomizeToolbar -> binding.toolbar.title = getString(fragment.setToolbarTitle())
+            is CustomizeOfficeToolbar -> binding.toolbar.title =
+                getString(fragment.setToolbarTitle())
             else -> binding.toolbar.title = getString(R.string.app_name)
         }
     }
+
+    private fun customizeOfficeToolbar(fragment: Fragment) {
+        when (fragment) {
+            is CustomizeOfficeToolbar -> {
+                supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                supportActionBar?.setDisplayShowHomeEnabled(true)
+                binding.toolbar.setNavigationOnClickListener {
+                    navigation.navigateBack()
+                }
+            }
+            else -> {
+                supportActionBar?.setDisplayHomeAsUpEnabled(false)
+                supportActionBar?.setDisplayShowHomeEnabled(false)
+            }
+        }
+    }
+
 }

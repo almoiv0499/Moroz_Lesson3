@@ -24,7 +24,7 @@
         android:id="@+id/address"
         android:layout_width="@dimen/textView_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/textView_offices_marginTop"
+        android:layout_marginTop="16dp"
         android:background="@drawable/office_details_background"
         android:gravity="center"
         android:padding="@dimen/textView_padding"
@@ -32,6 +32,7 @@
         android:textSize="@dimen/textView_offices_textSize"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/office_details_guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/office_details_guideline_start"
         app:layout_constraintTop_toTopOf="parent" />
 

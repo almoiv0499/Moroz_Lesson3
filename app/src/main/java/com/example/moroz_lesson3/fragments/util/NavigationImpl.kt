@@ -49,17 +49,6 @@ object NavigationImpl : Navigation {
         backPressed()
     }
 
-    override fun bottomNavigationVisibility(fragment: Fragment) {
-        when (fragment) {
-            is AuthorizationFragment,
-            is OfficeDetailsFragment,
-            -> activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility =
-                View.GONE
-            else -> activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility =
-                View.VISIBLE
-        }
-    }
-
     fun onDestroy() {
         activity = null
     }
