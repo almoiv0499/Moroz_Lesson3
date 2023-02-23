@@ -29,18 +29,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateByBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
+            val fragmentManager = supportFragmentManager
             when (menuItem.itemId) {
                 R.id.home -> {
                     val fragment = MainScreenFragment.newInstance()
-                    viewModel.navigationBetweenFragments(this, fragment)
+                    viewModel.navigationBetweenFragments(fragmentManager, fragment)
                 }
                 R.id.vacancies -> {
                     val fragment = VacanciesFragment.newInstance()
-                    viewModel.navigationBetweenFragments(this, fragment)
+                    viewModel.navigationBetweenFragments(fragmentManager, fragment)
                 }
                 R.id.offices -> {
                     val fragment = OfficesFragment.newInstance()
-                    viewModel.navigationBetweenFragments(this, fragment)
+                    viewModel.navigationBetweenFragments(fragmentManager, fragment)
                 }
                 else -> {
                     binding.bottomNavigation.visibility = View.GONE
@@ -53,7 +54,8 @@ class MainActivity : AppCompatActivity() {
     fun checkFragment(fragment: Fragment) {
         when (fragment) {
             is AuthorizationFragment,
-            is OfficeDetailsFragment -> binding.bottomNavigation.visibility =View.GONE
+            is OfficeDetailsFragment,
+            -> binding.bottomNavigation.visibility = View.GONE
             else -> binding.bottomNavigation.visibility = View.VISIBLE
         }
     }

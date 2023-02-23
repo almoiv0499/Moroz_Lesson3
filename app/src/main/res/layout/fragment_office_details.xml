@@ -16,8 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:titleCentered="true"
-        app:titleTextColor="@color/white"
-        />
+        app:titleTextColor="@color/white" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/office_details_guideline_start"
@@ -38,12 +37,27 @@
         android:layout_width="@dimen/textView_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/textView_offices_marginTop"
+        android:background="@drawable/office_details_background"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/textView_offices_textSize"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/office_details_guideline_end"
         app:layout_constraintStart_toStartOf="@id/office_details_guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/office_details_toolbar"/>
+        app:layout_constraintTop_toBottomOf="@id/office_details_toolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phone_number"
+        android:layout_width="@dimen/textView_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textView_offices_marginTop"
+        android:background="@drawable/office_details_background"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textView_offices_textSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/office_details_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_details_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,19 +6,17 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentAuthorizationBinding
-import com.example.moroz_lesson3.fragments.base.BaseFragment
 
-class AuthorizationFragment : BaseFragment<AuthorizationViewModel>() {
+class AuthorizationFragment : Fragment() {
 
     companion object {
         private const val PASSWORD = "password123"
     }
 
-    override val viewModel: AuthorizationViewModel by viewModels()
     private var _binding: FragmentAuthorizationBinding? = null
     private val binding get() = _binding!!
 
@@ -95,7 +93,6 @@ class AuthorizationFragment : BaseFragment<AuthorizationViewModel>() {
         binding.loginButton.setOnClickListener {
             binding.groupVisibility.visibility = View.GONE
             binding.progressLoading.visibility = View.VISIBLE
-            viewModel.navigateToMainScreenFragment()
         }
     }
 

@@ -4,22 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficeDetailsBinding
-import com.example.moroz_lesson3.fragments.base.BaseFragment
+import com.example.moroz_lesson3.model.Office
+import com.example.moroz_lesson3.model.parcelable
 
-class OfficeDetailsFragment : BaseFragment<OfficesDetailsViewModel>() {
+class OfficeDetailsFragment : Fragment() {
 
     companion object {
-        private const val ADDRESS_KEY = "address_key"
-        private const val CITY_KEY = "city_key"
+        private const val OFFICE_KEY = "office_key"
 
-        fun newInstance(city: String, address: String): OfficeDetailsFragment {
+        fun newInstance(office: Office): OfficeDetailsFragment {
             val fragment = OfficeDetailsFragment()
             val args = Bundle().apply {
-                putString(CITY_KEY, city)
-                putString(ADDRESS_KEY, address)
+                putParcelable(OFFICE_KEY, office)
             }
             fragment.arguments = args
             return fragment
@@ -28,8 +27,6 @@ class OfficeDetailsFragment : BaseFragment<OfficesDetailsViewModel>() {
 
     private var _binding: FragmentOfficeDetailsBinding? = null
     private val binding get() = _binding!!
-
-    override val viewModel by viewModels<OfficesDetailsViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,23 +46,21 @@ class OfficeDetailsFragment : BaseFragment<OfficesDetailsViewModel>() {
     }
 
     private fun setCityInfoToScreen() {
-        with(binding) {
-            officeDetailsToolbar.title = getCity()
-            address.text = getAddress()
+        val office = getOfficeData()
+        if (office != null) {
+            with(binding) {
+                officeDetailsToolbar.title = office.city
+                address.text = office.address
+            }
         }
     }
 
-    private fun getAddress(): String {
-        return arguments?.getString(ADDRESS_KEY).toString()
-    }
-
-    private fun getCity(): String {
-        return arguments?.getString(CITY_KEY).toString()
+    private fun getOfficeData(): Office? {
+        return arguments?.parcelable(OFFICE_KEY)
     }
 
     private fun navigateToOfficesFragment() {
         binding.officeDetailsToolbar.setNavigationOnClickListener {
-            viewModel.navigateToOfficesFragment()
         }
     }
 

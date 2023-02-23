@@ -1,9 +1,23 @@
 package com.example.moroz_lesson3.fragments.util
 
 import androidx.fragment.app.Fragment
+import com.example.moroz_lesson3.model.Office
 
-sealed class Navigation {
-    data class ToFragment(val fragment: Fragment) : Navigation()
-    data class ToFragmentWithoutBackStack(val fragmentWithoutBackStack: Fragment) : Navigation()
-    object ToBack : Navigation()
+interface Navigator {
+
+    fun navigateFromAuthorizationToMainScreen()
+
+    fun navigateToMainScreenInBottomNavigation(fragment: Fragment)
+
+    fun navigateToVacanciesInBottomNavigation(fragment: Fragment)
+
+    fun navigateToOfficesInBottomNavigation(fragment: Fragment)
+
+    fun navigateToOfficesDetails(office: Office)
+
+    fun navigateBack()
+
+    fun bottomNavigationVisibility(fragment: Fragment)
 }
+
+fun Fragment.navigation(): Navigator = requireActivity() as Navigator
