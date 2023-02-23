@@ -42,6 +42,7 @@
     <dimen name="textView_offices_textSize">23sp</dimen>
     <dimen name="textView_authorization_marginTop">20dp</dimen>
     <dimen name="textView_authorization_textSize">40sp</dimen>
+    <dimen name="textView_padding">10dp</dimen>
 
     <!-- ImageView -->
     <dimen name="imageView_width_by_fill">0dp</dimen>

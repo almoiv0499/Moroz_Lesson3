@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.R
-import com.example.moroz_lesson3.activity.MainActivity
 import com.example.moroz_lesson3.databinding.FragmentOfficeDetailsBinding
 import com.example.moroz_lesson3.fragments.util.CustomizeToolbar
 import com.example.moroz_lesson3.model.Office
@@ -50,6 +49,7 @@ class OfficeDetailsFragment : Fragment(), CustomizeToolbar {
         if (office != null) {
             with(binding) {
                 address.text = office.address
+                phoneNumber.text = office.phoneNumber
             }
         }
     }
