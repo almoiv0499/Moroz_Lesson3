@@ -79,8 +79,8 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI() {
         val fragment = currentFragment
         bottomNavigationVisibility(fragment)
-        customizeToolbar(fragment)
         customizeOfficeToolbar(fragment)
+        customizeToolbar(fragment)
     }
 
     private fun bottomNavigationVisibility(fragment: Fragment) {
