@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.details.OfficeDetailsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/office_details_guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guideline_begin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/office_details_guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guideline_end" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/address"
+        android:layout_width="@dimen/textView_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/office_details_background"
+        android:gravity="center"
+        android:padding="@dimen/textView_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textView_offices_textSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/office_details_guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/office_details_guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phone_number"
+        android:layout_width="@dimen/textView_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textView_offices_marginTop"
+        android:background="@drawable/office_details_background"
+        android:gravity="center"
+        android:padding="@dimen/textView_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textView_offices_textSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/office_details_guideline_end"
+        app:layout_constraintStart_toStartOf="@id/office_details_guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
