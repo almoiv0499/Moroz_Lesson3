@@ -41,7 +41,6 @@ class OfficesFragment : Fragment(), CustomizeToolbar {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        navigateToOfficeDetailsFragment()
         initOfficesRecyclerView()
     }
 
@@ -52,49 +51,9 @@ class OfficesFragment : Fragment(), CustomizeToolbar {
         }
     }
 
-    private fun navigateToOfficeDetailsFragment() {
-//        with(binding) {
-//            moscowOffice.setOnClickListener {
-//                val city = getString(R.string.string_moscow)
-//                val address = getString(R.string.moscow_address)
-//                val phoneNumber = getString(R.string.phone_number)
-//                navigateToOfficeDetails(city, address, phoneNumber)
-//            }
-//            kazanOffice.setOnClickListener {
-//                val city = getString(R.string.string_kazan)
-//                val address = getString(R.string.kazan_address)
-//                val phoneNumber = getString(R.string.phone_number)
-//                navigateToOfficeDetails(city, address, phoneNumber)
-//            }
-//            rostovOnDonOffice.setOnClickListener {
-//                val city = getString(R.string.string_rostov_on_don)
-//                val address = getString(R.string.rostovOnDon_address)
-//                val phoneNumber = getString(R.string.phone_number)
-//                navigateToOfficeDetails(city, address, phoneNumber)
-//            }
-//            minskOffice.setOnClickListener {
-//                val city = getString(R.string.string_minsk)
-//                val address = getString(R.string.minsk_address)
-//                val phoneNumber = getString(R.string.phone_number)
-//                navigateToOfficeDetails(city, address, phoneNumber)
-//            }
-//            gomelOffice.setOnClickListener {
-//                val city = getString(R.string.string_gomel)
-//                val address = getString(R.string.gomel_address)
-//                val phoneNumber = getString(R.string.phone_number)
-//                navigateToOfficeDetails(city, address, phoneNumber)
-//            }
-//        }
-    }
-
     private fun navigateToOfficeDetails(office: Office) {
         navigation().navigateToOfficesDetails(office)
     }
-
-//    private fun navigateToOfficeDetails(city: String, address: String, phoneNumber: String) {
-//        val office = Office(city, address, phoneNumber)
-//        navigation().navigateToOfficesDetails(office)
-//    }
 
     override fun setToolbarTitle(): Int = R.string.string_offices
 
@@ -107,37 +66,39 @@ class OfficesFragment : Fragment(), CustomizeToolbar {
         val offices = mutableListOf<Office>()
         offices.add(
             Office(
-                getString(R.string.string_moscow),
-                getString(R.string.moscow_address),
-                getString(R.string.phone_number)
+                city = getString(R.string.string_moscow),
+                address = getString(R.string.moscow_address),
+                phoneNumber = getString(R.string.phone_number),
             )
         )
         offices.add(
             Office(
-                getString(R.string.string_kazan),
-                getString(R.string.kazan_address),
-                getString(R.string.phone_number)
+                city = getString(R.string.string_kazan),
+                address = getString(R.string.kazan_address),
+                phoneNumber = getString(R.string.phone_number)
             )
         )
         offices.add(
             Office(
-                getString(R.string.string_rostov_on_don),
-                getString(R.string.rostovOnDon_address),
-                getString(R.string.phone_number)
+                city = getString(R.string.string_rostov_on_don),
+                address = getString(R.string.rostovOnDon_address),
+                phoneNumber = getString(R.string.phone_number)
             )
         )
         offices.add(
             Office(
-                getString(R.string.string_minsk),
-                getString(R.string.minsk_address),
-                getString(R.string.phone_number)
+                city = getString(R.string.string_minsk),
+                address = getString(R.string.minsk_address),
+                phoneNumber = getString(R.string.phone_number),
+                viewType = 1
             )
         )
         offices.add(
             Office(
-                getString(R.string.string_gomel),
-                getString(R.string.gomel_address),
-                getString(R.string.phone_number)
+                city = getString(R.string.string_gomel),
+                address = getString(R.string.gomel_address),
+                phoneNumber = getString(R.string.phone_number),
+                viewType = 1
             )
         )
         return offices
