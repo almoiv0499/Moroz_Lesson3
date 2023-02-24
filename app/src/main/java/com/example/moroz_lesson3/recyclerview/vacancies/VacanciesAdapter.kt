@@ -1,12 +1,12 @@
-package com.example.moroz_lesson3.recyclerview.adapter
+package com.example.moroz_lesson3.recyclerview.vacancies
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.example.moroz_lesson3.databinding.VacancyRvItemBinding
 import com.example.moroz_lesson3.model.Vacancy
-import com.example.moroz_lesson3.recyclerview.diffutil.VacanciesDiffUtil
-import com.example.moroz_lesson3.recyclerview.viewholder.VacanciesViewHolder
+import com.example.moroz_lesson3.recyclerview.vacancies.VacanciesDiffUtil
+import com.example.moroz_lesson3.recyclerview.vacancies.VacanciesViewHolder
 
 class VacanciesAdapter : ListAdapter<Vacancy, VacanciesViewHolder>(VacanciesDiffUtil()) {
 

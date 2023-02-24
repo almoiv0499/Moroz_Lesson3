@@ -1,4 +1,4 @@
-package com.example.moroz_lesson3.recyclerview.viewholder
+package com.example.moroz_lesson3.recyclerview.vacancies
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide

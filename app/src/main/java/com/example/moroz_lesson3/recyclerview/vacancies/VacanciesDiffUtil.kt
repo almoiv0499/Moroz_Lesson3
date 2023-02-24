@@ -1,4 +1,4 @@
-package com.example.moroz_lesson3.recyclerview.diffutil
+package com.example.moroz_lesson3.recyclerview.vacancies
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.moroz_lesson3.model.Vacancy

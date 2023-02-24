@@ -9,7 +9,7 @@ import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.FragmentVacanciesBinding
 import com.example.moroz_lesson3.fragments.util.CustomizeToolbar
 import com.example.moroz_lesson3.model.Vacancy
-import com.example.moroz_lesson3.recyclerview.adapter.VacanciesAdapter
+import com.example.moroz_lesson3.recyclerview.vacancies.VacanciesAdapter
 
 class VacanciesFragment : Fragment(), CustomizeToolbar {
 
