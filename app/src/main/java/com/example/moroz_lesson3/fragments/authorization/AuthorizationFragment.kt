@@ -17,6 +17,7 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
     companion object {
         private const val USERNAME = "aleks"
         private const val PASSWORD = "password123"
+        private const val EMPTY_STRING = ""
     }
 
     private var _binding: FragmentAuthorizationBinding? = null
@@ -73,7 +74,7 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
     private fun validateUsername(): Boolean {
         val username = binding.inputUsername.text.toString().trim()
         return if (username == USERNAME) {
-            binding.inputUsernameLayout.error = ""
+            binding.inputUsernameLayout.error = EMPTY_STRING
             true
         } else {
             binding.inputUsernameLayout.error = getString(R.string.editText_username_error)
@@ -84,7 +85,7 @@ class AuthorizationFragment : Fragment(), CustomizeToolbar {
     private fun validatePassword(): Boolean {
         val password = binding.inputPassword.text.toString().trim()
         return if (password == PASSWORD) {
-            binding.inputPasswordLayout.error = ""
+            binding.inputPasswordLayout.error = EMPTY_STRING
             true
         } else {
             binding.inputPasswordLayout.error = getString(R.string.editText_password_error)

@@ -38,17 +38,23 @@
     <dimen name="textView_width">0dp</dimen>
     <dimen name="textView_description_textSize">16sp</dimen>
     <dimen name="textView_about_company_textSize">19sp</dimen>
+    <dimen name="textView_rv_textSize">18sp</dimen>
     <dimen name="textView_offices_marginTop">15dp</dimen>
     <dimen name="textView_offices_textSize">23sp</dimen>
     <dimen name="textView_authorization_marginTop">20dp</dimen>
     <dimen name="textView_authorization_textSize">40sp</dimen>
     <dimen name="textView_padding">10dp</dimen>
+    <dimen name="textView_marginStart">10dp</dimen>
 
     <!-- ImageView -->
     <dimen name="imageView_width_by_fill">0dp</dimen>
     <dimen name="imageView_width">100dp</dimen>
     <dimen name="imageView_height">0dp</dimen>
     <dimen name="imageView_marginTop">5dp</dimen>
+    <dimen name="imageView_width_rv">50dp</dimen>
+    <dimen name="imageView_height_rv">50dp</dimen>
+    <dimen name="imageView_width_vacancy_rv">0dp</dimen>
+    <dimen name="imageView_height_vacancy_rv">150dp</dimen>
 
     <!-- Flow -->
     <dimen name="flow_width">0dp</dimen>
@@ -80,5 +86,16 @@
     <dimen name="editText_width">0dp</dimen>
     <dimen name="editText_marginTop_username">20dp</dimen>
     <dimen name="editText_marginTop_password">10dp</dimen>
+
+    <!-- RecyclerView -->
+    <dimen name="recyclerView_width">0dp</dimen>
+    <dimen name="recyclerView_height">0dp</dimen>
+    <dimen name="recyclerView_marginTop">10dp</dimen>
+
+    <!-- MaterialCardView -->
+    <dimen name="cardView_margin">10dp</dimen>
+    <dimen name="cardView_cornerRadius">10dp</dimen>
+    <dimen name="cardView_elevation">10dp</dimen>
+    <dimen name="cardView_padding">20dp</dimen>
 
 </resources>

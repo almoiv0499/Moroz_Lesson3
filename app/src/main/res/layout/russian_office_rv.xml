@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_russian_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardView_margin"
+    android:backgroundTint="@color/color_app"
+    app:cardCornerRadius="@dimen/cardView_cornerRadius"
+    app:cardElevation="@dimen/cardView_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/cardView_padding">
+
+        <ImageView
+            android:id="@+id/russian_flag"
+            android:layout_width="@dimen/imageView_width_rv"
+            android:layout_height="@dimen/imageView_height_rv"
+            android:contentDescription="@string/russian_flag"
+            android:src="@drawable/ic_russia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/russian_city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/russian_city"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textView_marginStart"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textView_rv_textSize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/russian_flag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

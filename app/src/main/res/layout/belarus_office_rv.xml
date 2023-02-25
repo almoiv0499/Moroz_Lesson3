@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_belarus_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardView_margin"
+    app:cardCornerRadius="@dimen/cardView_cornerRadius"
+    app:cardElevation="@dimen/cardView_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/cardView_padding">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/belarus_city"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textView_marginStart"
+            android:gravity="center"
+            android:textColor="@color/color_app"
+            android:textSize="@dimen/textView_rv_textSize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/belarus_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/belarus_flag"
+            android:layout_width="@dimen/imageView_width_rv"
+            android:layout_height="@dimen/imageView_height_rv"
+            android:contentDescription="@string/belarus_flag"
+            android:src="@drawable/ic_belarus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/belarus_city"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -10,4 +10,5 @@
     <color name="color_app">#2987E4</color>
     <color name="color_chips">#CDD1D1</color>
     <color name="error">#FF0000</color>
+    <color name="background_vacancy_rv">#F0F0F0</color>
 </resources>

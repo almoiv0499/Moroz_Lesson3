@@ -2,6 +2,7 @@ package com.example.moroz_lesson3.activity
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         register()
         navigateByBottomNavigation()
+        handleBackPressed()
     }
 
     private fun navigateByBottomNavigation() {
@@ -78,12 +80,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI() {
         val fragment = currentFragment
-        bottomNavigationVisibility(fragment)
-        customizeToolbar(fragment)
+        setBottomNavigationVisibility(fragment)
         customizeOfficeToolbar(fragment)
+        customizeToolbar(fragment)
     }
 
-    private fun bottomNavigationVisibility(fragment: Fragment) {
+    private fun setBottomNavigationVisibility(fragment: Fragment) {
         when (fragment) {
             is AuthorizationFragment,
             is OfficeDetailsFragment,
@@ -116,5 +118,24 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun handleBackPressed() {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                when {
+                    isMainScreen() -> finish()
+                    isOfficeDetailsFragment() -> navigation.navigateBack()
+                    else -> binding.bottomNavigation.selectedItemId = R.id.home
+                }
+            }
+        }
+        onBackPressedDispatcher.addCallback(this, callback)
+    }
+
+    private fun isMainScreen(): Boolean {
+        return binding.bottomNavigation.selectedItemId == R.id.home
+    }
+
+    private fun isOfficeDetailsFragment() = currentFragment is OfficeDetailsFragment
 
 }

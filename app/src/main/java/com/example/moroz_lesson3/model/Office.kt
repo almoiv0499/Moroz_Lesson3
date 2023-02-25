@@ -9,7 +9,8 @@ import kotlinx.parcelize.Parcelize
 data class Office(
     val city: String,
     val address: String,
-    val phoneNumber: String
+    val phoneNumber: String,
+    val viewType: Int = 0
 ) : Parcelable
 
 inline fun <reified T : Parcelable> Bundle.parcelable(key: String): T? = when {
