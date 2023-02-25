@@ -25,16 +25,16 @@
             android:padding="@dimen/customView_padding">
 
             <ImageView
-                android:id="@+id/logo_customView"
+                android:id="@+id/vacancy_logo"
                 android:layout_width="@dimen/customView_widthImage"
                 android:layout_height="@dimen/customView_heightImage"
                 android:contentDescription="@string/logo_custom_view"
-                app:layout_constraintBottom_toBottomOf="@+id/subtitle_customView"
+                app:layout_constraintBottom_toBottomOf="@+id/vacancy_subtitle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/title_customView"
+                android:id="@+id/vacancy_title"
                 android:layout_width="@dimen/customView_width"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/customView_marginStart"
@@ -43,11 +43,11 @@
                 android:textSize="@dimen/customView_titleTextSize"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/logo_customView"
+                app:layout_constraintStart_toEndOf="@id/vacancy_logo"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/subtitle_customView"
+                android:id="@+id/vacancy_subtitle"
                 android:layout_width="@dimen/customView_width"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/customView_marginStart"
@@ -55,8 +55,8 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/customView_subtitleTextSize"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/logo_customView"
-                app:layout_constraintTop_toBottomOf="@id/title_customView" />
+                app:layout_constraintStart_toEndOf="@id/vacancy_logo"
+                app:layout_constraintTop_toBottomOf="@id/vacancy_title" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

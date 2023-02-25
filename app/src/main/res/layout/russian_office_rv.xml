@@ -4,20 +4,20 @@
     android:id="@+id/cardView_russian_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="@dimen/cardView_margin"
     android:backgroundTint="@color/color_app"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="7dp">
+    app:cardCornerRadius="@dimen/cardView_cornerRadius"
+    app:cardElevation="@dimen/cardView_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:padding="@dimen/cardView_padding">
 
         <ImageView
             android:id="@+id/russian_flag"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/imageView_width_rv"
+            android:layout_height="@dimen/imageView_height_rv"
             android:contentDescription="@string/russian_flag"
             android:src="@drawable/ic_russia"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,12 +27,12 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/russian_city"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/textView_width"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/textView_marginStart"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="@dimen/textView_rv_textSize"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
