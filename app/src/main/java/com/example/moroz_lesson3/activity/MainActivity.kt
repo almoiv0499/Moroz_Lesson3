@@ -123,27 +123,19 @@ class MainActivity : AppCompatActivity() {
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 when {
-                    isMainScreen() -> hideApp()
-                    isFragmentOfVacanciesOrOffices() ->
-                        binding.bottomNavigation.selectedItemId = R.id.home
-                    else -> navigation.navigateBack()
+                    isMainScreen() -> finish()
+                    isOfficeDetailsFragment() -> navigation.navigateBack()
+                    else -> binding.bottomNavigation.selectedItemId = R.id.home
                 }
             }
         }
         onBackPressedDispatcher.addCallback(this, callback)
     }
 
-    private fun hideApp() {
-        finish()
-    }
-
-    private fun isFragmentOfVacanciesOrOffices(): Boolean {
-        return binding.bottomNavigation.selectedItemId == R.id.offices
-                || binding.bottomNavigation.selectedItemId == R.id.vacancies
-    }
-
     private fun isMainScreen(): Boolean {
         return binding.bottomNavigation.selectedItemId == R.id.home
     }
+
+    private fun isOfficeDetailsFragment() = currentFragment is OfficeDetailsFragment
 
 }
