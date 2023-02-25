@@ -36,18 +36,20 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filter_vacancies"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/editText_width"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/editText_marginTop_username"
         app:endIconMode="clear_text"
-        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
         app:layout_constraintEnd_toEndOf="@id/vacancies_guideline_end"
-        app:layout_constraintTop_toTopOf="@id/vacancies_guideline_top">
+        app:layout_constraintStart_toStartOf="@id/vacancies_guideline_start"
+        app:layout_constraintTop_toTopOf="@id/vacancies_guideline_top" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Vacancy"
-            />
+            android:hint="@string/hint_username"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

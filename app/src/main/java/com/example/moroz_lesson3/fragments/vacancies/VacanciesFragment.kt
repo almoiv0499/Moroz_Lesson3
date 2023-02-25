@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import com.example.moroz_lesson3.R
 import com.example.moroz_lesson3.databinding.FragmentVacanciesBinding
@@ -22,7 +23,7 @@ class VacanciesFragment : Fragment(), CustomizeToolbar {
 
     private val vacanciesAdapter by lazy(LazyThreadSafetyMode.NONE) {
         VacanciesAdapter().apply {
-            submitList(mockVacanciesList())
+            setFilteredVacancies(mockVacanciesList())
         }
     }
 
@@ -38,6 +39,13 @@ class VacanciesFragment : Fragment(), CustomizeToolbar {
         super.onViewCreated(view, savedInstanceState)
 
         initRecyclerView()
+        filterVacancies()
+    }
+
+    private fun filterVacancies() {
+        binding.filterVacancies.editText?.doOnTextChanged {text, _, _, _ ->
+            vacanciesAdapter.filter.filter(text)
+        }
     }
 
     private fun initRecyclerView() {
