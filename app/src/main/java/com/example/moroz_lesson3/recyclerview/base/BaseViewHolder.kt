@@ -1,4 +1,4 @@
-package com.example.moroz_lesson3.recyclerview
+package com.example.moroz_lesson3.recyclerview.base
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView.ViewHolder

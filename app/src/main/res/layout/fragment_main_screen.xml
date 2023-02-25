@@ -7,108 +7,21 @@
     tools:context=".fragments.mainscreen.MainScreenFragment">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/guideline_begin" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/guideline_end" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="welcome_imageView"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <ImageView
-        android:id="@+id/welcome_imageView"
-        android:layout_width="@dimen/imageView_width_by_fill"
-        android:layout_height="@dimen/imageView_height"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/welcome_image"
-        android:scaleType="fitXY"
-        android:src="@drawable/title_image"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_image"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_mainScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <ImageView
-        android:id="@+id/logo_imageView"
-        android:layout_width="@dimen/imageView_width"
-        android:layout_height="@dimen/imageView_height"
-        android:layout_marginTop="@dimen/imageView_marginTop"
-        android:contentDescription="@string/aston_logo"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="@id/subtitle"
-        app:layout_constraintEnd_toStartOf="@id/title"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/guideline_image" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/title"
-        style="@style/TextViewTitlesStyle"
-        android:text="@string/string_title"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toEndOf="@id/logo_imageView"
-        app:layout_constraintTop_toTopOf="@id/logo_imageView"
-        app:layout_constraintVertical_bias="0" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/subtitle"
-        style="@style/TextViewDescriptionStyle"
-        android:text="@string/string_subtitle"
-        android:textSize="@dimen/textView_description_textSize"
-        app:layout_constraintBottom_toTopOf="@id/about_us_title"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toEndOf="@id/logo_imageView"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintVertical_bias="0" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="@dimen/barrier_width"
-        android:layout_height="@dimen/barrier_height"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="subtitle,logo_imageView" />
-
-    <Space
-        android:id="@+id/spacer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrier" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/about_us_title"
-        style="@style/TextViewTitlesStyle"
-        android:text="@string/about_us"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/spacer" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/about_us_description"
-        style="@style/TextViewDescriptionStyle"
-        android:text="@string/string_about_us_description"
-        android:textSize="@dimen/textView_about_company_textSize"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/about_us_title" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

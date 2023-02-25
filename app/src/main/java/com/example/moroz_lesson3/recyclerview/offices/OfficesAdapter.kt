@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.moroz_lesson3.databinding.BelarusOfficeRvBinding
 import com.example.moroz_lesson3.databinding.RussianOfficeRvBinding
 import com.example.moroz_lesson3.model.Office
-import com.example.moroz_lesson3.recyclerview.BaseViewHolder
+import com.example.moroz_lesson3.recyclerview.base.BaseViewHolder
 
 class OfficesAdapter : ListAdapter<Office, BaseViewHolder>(OfficesDiffUtil()) {
 

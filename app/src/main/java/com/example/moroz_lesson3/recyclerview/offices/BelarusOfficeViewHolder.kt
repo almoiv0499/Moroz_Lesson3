@@ -2,7 +2,7 @@ package com.example.moroz_lesson3.recyclerview.offices
 
 import com.example.moroz_lesson3.databinding.BelarusOfficeRvBinding
 import com.example.moroz_lesson3.model.Office
-import com.example.moroz_lesson3.recyclerview.BaseViewHolder
+import com.example.moroz_lesson3.recyclerview.base.BaseViewHolder
 
 class BelarusOfficeViewHolder(
     private val binding: BelarusOfficeRvBinding,
